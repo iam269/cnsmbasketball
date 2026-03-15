@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { Instagram, Music, Twitter, Heart, MessageCircle, Share2 } from "lucide-react";
 
 const socialPosts = [
-  { platform: "instagram", handle: "@riverside_eagles", content: "GAME DAY! 🏀🔥 Let's pack Eagles Arena tonight. Tip-off at 7 PM!", likes: 342, comments: 48 },
-  { platform: "instagram", handle: "@riverside_eagles", content: "Practice makes perfect 💪 The team putting in work ahead of playoffs.", likes: 256, comments: 31 },
-  { platform: "tiktok", handle: "@eagleshoops", content: "Marcus Johnson's INSANE crossover had the crowd going WILD 🔥🦅", likes: 1200, comments: 89 },
-  { platform: "instagram", handle: "@riverside_eagles", content: "Senior Night was 🔥 Thank you to our graduating players!", likes: 512, comments: 67 },
-  { platform: "tiktok", handle: "@eagleshoops", content: "POV: You're watching the Eagles warm up before a playoff game 🏀", likes: 890, comments: 54 },
-  { platform: "instagram", handle: "@riverside_eagles", content: "Championship vibes only! 🏆 #EaglesPride #Basketball", likes: 678, comments: 92 },
+  { platform: "instagram", handle: "@riverside_eagles", content: "Zi de meci! 🏀🔥 Să umplem Eagles Arena diseară. Primul aruncaj la 19:00!", likes: 342, comments: 48 },
+  { platform: "instagram", handle: "@riverside_eagles", content: "Antrenamentul face perfect 💪 Echipa lucrează înainte de play-off.", likes: 256, comments: 31 },
+  { platform: "tiktok", handle: "@eagleshoops", content: "Crossover-ul incredibil al lui Marcus Johnson a dat publicul pe spate 🔥🦅", likes: 1200, comments: 89 },
+  { platform: "instagram", handle: "@riverside_eagles", content: "Seara absolvenților a fost 🔥 Mulțumim jucătorilor care pleacă!", likes: 512, comments: 67 },
+  { platform: "tiktok", handle: "@eagleshoops", content: "POV: Privești Eagles la încălzire înainte de meciul din play-off 🏀", likes: 890, comments: 54 },
+  { platform: "instagram", handle: "@riverside_eagles", content: "Doar vibrații de campionat! 🏆 #EaglesPride #Baschet", likes: 678, comments: 92 },
 ];
 
 const FansSection = () => {
@@ -24,8 +24,8 @@ const FansSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Fan <span className="text-accent">Zone</span></h2>
-          <p className="section-subtitle mx-auto">Follow us on social media and be part of the Eagles community.</p>
+          <h2 className="section-title mb-4">Zona <span className="text-accent">fanilor</span></h2>
+          <p className="section-subtitle mx-auto">Urmărește-ne pe rețelele sociale și fii parte din comunitatea Eagles.</p>
         </motion.div>
 
         {/* Social links */}

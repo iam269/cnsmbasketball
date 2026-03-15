@@ -3,9 +3,9 @@ import { useRef } from "react";
 import { Zap, Star, TrendingUp } from "lucide-react";
 
 const highlights = [
-  { icon: Zap, title: "Undefeated at Home", desc: "12-0 record at Eagles Arena this season — our fortress remains untouched." },
-  { icon: Star, title: "Conference Champions", desc: "Back-to-back conference titles proving Eagles dominance in the league." },
-  { icon: TrendingUp, title: "Record-Breaking Season", desc: "Most points scored in a single season in school history — 2,847 total points." },
+  { icon: Zap, title: "Invincibili acasă", desc: "12-0 la Eagles Arena în acest sezon — fortăreața noastră rămâne neatinsă." },
+  { icon: Star, title: "Campioni ai conferinței", desc: "Două titluri consecutive care dovedesc dominația Eagles în ligă." },
+  { icon: TrendingUp, title: "Sezon record", desc: "Cele mai multe puncte marcate într-un sezon în istoria școlii — 2.847 puncte în total." },
 ];
 
 const HighlightsSection = () => {
@@ -24,8 +24,8 @@ const HighlightsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Season <span className="text-accent">Highlights</span></h2>
-          <p className="section-subtitle mx-auto">Key achievements from an incredible season.</p>
+          <h2 className="section-title mb-4">Highlight-uri <span className="text-accent">sezon</span></h2>
+          <p className="section-subtitle mx-auto">Realizări cheie dintr-un sezon incredibil.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

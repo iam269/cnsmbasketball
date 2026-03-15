@@ -3,9 +3,9 @@ import { useRef } from "react";
 import { User } from "lucide-react";
 
 const coaches = [
-  { name: "Coach David Harris", role: "Head Coach", desc: "20+ years of coaching experience. Former Division I player with a passion for developing young talent and building championship teams." },
-  { name: "Coach Sarah Mitchell", role: "Assistant Coach", desc: "Former collegiate standout and defensive specialist. Focuses on player development, strategy, and fostering a winning mindset." },
-  { name: "Coach Mike Torres", role: "Strength & Conditioning", desc: "Certified strength coach dedicated to maximizing athletic performance and injury prevention for every player." },
+  { name: "Antrenor David Harris", role: "Antrenor principal", desc: "Peste 20 de ani experiență. Fost jucător Divizia I, pasionat de dezvoltarea tinerilor talenți și construirea echipelor de campionat." },
+  { name: "Antrenoara Sarah Mitchell", role: "Antrenor secund", desc: "Fostă valoare colegială și specialistă în apărare. Se concentrează pe dezvoltarea jucătorilor, strategie și mentalitate de câștigător." },
+  { name: "Antrenor Mike Torres", role: "Pregătire fizică", desc: "Antrenor certificat pentru forță și condiționare, dedicat performanței atletice și prevenției accidentărilor." },
 ];
 
 const CoachesSection = () => {
@@ -21,8 +21,8 @@ const CoachesSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Coaching <span className="text-accent">Staff</span></h2>
-          <p className="section-subtitle mx-auto">The leaders behind the Eagles' success.</p>
+          <h2 className="section-title mb-4">Antrenori</h2>
+          <p className="section-subtitle mx-auto">Liderii din spatele succesului Eagles.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

@@ -2,7 +2,16 @@ import { useState, useEffect } from "react";
 import { Menu, X, Trophy } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navItems = ["Home", "Team", "Players", "Schedule", "Gallery", "News", "Sponsors", "Contact"];
+const navItems: { label: string; id: string }[] = [
+  { label: "Acasă", id: "home" },
+  { label: "Echipă", id: "team" },
+  { label: "Jucători", id: "players" },
+  { label: "Program", id: "schedule" },
+  { label: "Galerie", id: "gallery" },
+  { label: "Știri", id: "news" },
+  { label: "Sponsori", id: "sponsors" },
+  { label: "Contact", id: "contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,11 +51,11 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <button
-              key={item}
-              onClick={() => scrollTo(item)}
+              key={item.id}
+              onClick={() => scrollTo(item.id)}
               className="text-sm font-medium uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
             >
-              {item}
+              {item.label}
             </button>
           ))}
         </div>
@@ -69,11 +78,11 @@ const Navbar = () => {
             <div className="container mx-auto py-4 px-4 flex flex-col gap-4">
               {navItems.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => scrollTo(item)}
+                  key={item.id}
+                  onClick={() => scrollTo(item.id)}
                   className="text-left font-display text-lg uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors py-2"
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
             </div>

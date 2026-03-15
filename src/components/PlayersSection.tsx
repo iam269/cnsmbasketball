@@ -1,16 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { User } from "lucide-react";
 
 const players = [
-  { name: "Marcus Johnson", position: "Point Guard", number: 1, height: "6'1\"", ppg: 18.5, apg: 7.2, rpg: 3.1 },
-  { name: "Devon Williams", position: "Shooting Guard", number: 3, height: "6'3\"", ppg: 15.8, apg: 3.4, rpg: 4.0 },
-  { name: "Jaylen Carter", position: "Small Forward", number: 7, height: "6'5\"", ppg: 22.1, apg: 2.8, rpg: 6.5 },
-  { name: "Isaiah Thompson", position: "Power Forward", number: 21, height: "6'7\"", ppg: 14.2, apg: 1.9, rpg: 8.3 },
-  { name: "Tyler Robinson", position: "Center", number: 34, height: "6'9\"", ppg: 12.6, apg: 1.2, rpg: 10.1 },
-  { name: "Andre Davis", position: "Point Guard", number: 11, height: "5'11\"", ppg: 9.8, apg: 5.5, rpg: 2.4 },
-  { name: "Chris Morgan", position: "Shooting Guard", number: 15, height: "6'2\"", ppg: 11.3, apg: 2.1, rpg: 3.7 },
-  { name: "Ryan Mitchell", position: "Small Forward", number: 22, height: "6'4\"", ppg: 10.5, apg: 2.6, rpg: 5.2 },
+  { name: "Marcus Johnson", position: "Pivot", number: 1, height: "1,85 m", ppg: 18.5, apg: 7.2, rpg: 3.1, image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" },
+  { name: "Devon Williams", position: "Aruncător", number: 3, height: "1,91 m", ppg: 15.8, apg: 3.4, rpg: 4.0, image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" },
+  { name: "Jaylen Carter", position: "Aripă mică", number: 7, height: "1,96 m", ppg: 22.1, apg: 2.8, rpg: 6.5, image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" },
+  { name: "Isaiah Thompson", position: "Aripă mare", number: 21, height: "2,01 m", ppg: 14.2, apg: 1.9, rpg: 8.3, image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop" },
+  { name: "Tyler Robinson", position: "Centru", number: 34, height: "2,06 m", ppg: 12.6, apg: 1.2, rpg: 10.1, image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" },
+  { name: "Andre Davis", position: "Pivot", number: 11, height: "1,80 m", ppg: 9.8, apg: 5.5, rpg: 2.4, image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=400&h=400&fit=crop" },
+  { name: "Chris Morgan", position: "Aruncător", number: 15, height: "1,88 m", ppg: 11.3, apg: 2.1, rpg: 3.7, image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
+  { name: "Ryan Mitchell", position: "Aripă mică", number: 22, height: "1,93 m", ppg: 10.5, apg: 2.6, rpg: 5.2, image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" },
 ];
 
 const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: number; inView: boolean }) => {
@@ -36,19 +35,24 @@ const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: numbe
           style={{ backfaceVisibility: "hidden" }}
         >
           <div className="relative h-48 bg-gradient-to-b from-primary/20 to-muted flex items-center justify-center overflow-hidden">
-            <span className="absolute text-[120px] font-display font-bold text-foreground/5 leading-none">
-              {player.number}
+            <img
+              src={player.image}
+              alt={player.name}
+              className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+            />
+            <span className="absolute inset-0 bg-gradient-to-t from-card/95 via-transparent to-transparent" />
+            <span className="absolute bottom-2 left-2 text-[80px] font-display font-bold text-white/20 leading-none drop-shadow">
+              #{player.number}
             </span>
-            <User className="w-20 h-20 text-muted-foreground/40 group-hover:text-accent/60 transition-colors relative z-10" />
-            <div className="absolute top-3 right-3 bg-accent text-accent-foreground font-display font-bold text-lg w-10 h-10 rounded-full flex items-center justify-center">
+            <div className="absolute top-3 right-3 bg-accent text-accent-foreground font-display font-bold text-lg w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10">
               #{player.number}
             </div>
           </div>
           <div className="p-5">
             <h3 className="font-display text-lg font-bold uppercase group-hover:text-accent transition-colors">{player.name}</h3>
             <p className="text-accent text-sm font-semibold uppercase tracking-wider">{player.position}</p>
-            <p className="text-muted-foreground text-sm mt-1">Height: {player.height}</p>
-            <p className="text-muted-foreground text-xs mt-2 italic">Tap to see stats →</p>
+            <p className="text-muted-foreground text-sm mt-1">Înălțime: {player.height}</p>
+            <p className="text-muted-foreground text-xs mt-2 italic">Atinge pentru statistici →</p>
           </div>
         </div>
 
@@ -74,7 +78,7 @@ const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: numbe
               </div>
             ))}
           </div>
-          <p className="text-muted-foreground text-xs mt-4 italic">Tap to flip back</p>
+          <p className="text-muted-foreground text-xs mt-4 italic">Atinge pentru a întoarce</p>
         </div>
       </motion.div>
     </motion.div>
@@ -95,8 +99,8 @@ const PlayersSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Meet the <span className="text-accent">Roster</span></h2>
-          <p className="section-subtitle mx-auto">The heart and soul of the Eagles — tap a card to see player stats.</p>
+          <h2 className="section-title mb-4">Cunoaște <span className="text-accent">lotul</span></h2>
+          <p className="section-subtitle mx-auto">Inima Eagles — atinge o carte pentru statistici jucător.</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

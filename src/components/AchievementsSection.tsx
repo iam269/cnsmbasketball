@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { Trophy, Medal, Star, Award } from "lucide-react";
 
 const achievements = [
-  { year: "2025", title: "Conference Champions", desc: "Back-to-back conference championship victory.", icon: Trophy },
-  { year: "2024", title: "State Tournament Semifinalists", desc: "First semifinal appearance in 10 years.", icon: Star },
-  { year: "2023", title: "Regional Champions", desc: "Dominated the regional tournament with a 4-0 record.", icon: Medal },
-  { year: "2021", title: "Holiday Invitational Champions", desc: "Won the prestigious 16-team holiday tournament.", icon: Award },
-  { year: "2019", title: "State Champions", desc: "Historic state championship — first in school history.", icon: Trophy },
-  { year: "2017", title: "100th Program Win", desc: "Celebrated the 100th win in program history.", icon: Star },
+  { year: "2025", title: "Campioni ai conferinței", desc: "A doua victorie consecutivă la campionatul conferinței.", icon: Trophy },
+  { year: "2024", title: "Semifinaliști turneu de stat", desc: "Prima semifinală în 10 ani.", icon: Star },
+  { year: "2023", title: "Campioni regionali", desc: "Turneu regional dominat cu 4-0.", icon: Medal },
+  { year: "2021", title: "Campioni invitațional sărbători", desc: "Câștigători ai turneului prestigios cu 16 echipe.", icon: Award },
+  { year: "2019", title: "Campioni de stat", desc: "Campionat istoric — primul în istoria școlii.", icon: Trophy },
+  { year: "2017", title: "A 100-a victorie a programului", desc: "Sărbătoarea celei de-a 100-a victorii.", icon: Star },
 ];
 
 const AchievementsSection = () => {
@@ -24,8 +24,8 @@ const AchievementsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Team <span className="text-accent">Achievements</span></h2>
-          <p className="section-subtitle mx-auto">A proud history of excellence on the court.</p>
+          <h2 className="section-title mb-4">Realizări ale <span className="text-accent">echipei</span></h2>
+          <p className="section-subtitle mx-auto">O istorie mândră de excelență pe teren.</p>
         </motion.div>
 
         {/* Timeline */}

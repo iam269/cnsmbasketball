@@ -3,12 +3,12 @@ import { useRef, useState } from "react";
 import { X } from "lucide-react";
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop", alt: "Basketball game action" },
-  { src: "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=600&h=400&fit=crop", alt: "Team huddle" },
-  { src: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=600&h=400&fit=crop", alt: "Basketball dunk" },
-  { src: "https://images.unsplash.com/photo-1504450758481-7338bbe75c8e?w=600&h=400&fit=crop", alt: "Basketball court" },
-  { src: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop", alt: "Basketball" },
-  { src: "https://images.unsplash.com/photo-1559692048-79a3f837883d?w=600&h=400&fit=crop", alt: "Basketball players" },
+  { src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop", alt: "Acțiune meci baschet" },
+  { src: "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=600&h=400&fit=crop", alt: "Echipă la consiliere" },
+  { src: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=600&h=400&fit=crop", alt: "Dunk la baschet" },
+  { src: "https://images.unsplash.com/photo-1504450758481-7338bbe75c8e?w=600&h=400&fit=crop", alt: "Teren de baschet" },
+  { src: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop", alt: "Minge de baschet" },
+  { src: "https://images.unsplash.com/photo-1559692048-79a3f837883d?w=600&h=400&fit=crop", alt: "Jucători de baschet" },
 ];
 
 const GallerySection = () => {
@@ -25,8 +25,8 @@ const GallerySection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Photo <span className="text-accent">Gallery</span></h2>
-          <p className="section-subtitle mx-auto">Highlights and moments from the season.</p>
+          <h2 className="section-title mb-4">Galerie <span className="text-accent">foto</span></h2>
+          <p className="section-subtitle mx-auto">Momente și highlight-uri din sezon.</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -41,7 +41,7 @@ const GallerySection = () => {
             >
               <img src={img.src} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
-                <span className="text-foreground font-display uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">View</span>
+                <span className="text-foreground font-display uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Vizualizează</span>
               </div>
             </motion.button>
           ))}

@@ -4,9 +4,9 @@ import { useRef, useEffect, useState } from "react";
 import { Target, Award, Users } from "lucide-react";
 
 const stats = [
-  { label: "Years Active", value: 25, icon: Target },
-  { label: "Championships", value: 8, icon: Award },
-  { label: "Total Wins", value: 342, icon: Users },
+  { label: "Ani activi", value: 25, icon: Target },
+  { label: "Campionate", value: 8, icon: Award },
+  { label: "Victorii total", value: 342, icon: Users },
 ];
 
 const Counter = ({ target, inView }: { target: number; inView: boolean }) => {
@@ -41,9 +41,9 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">About the <span className="text-accent">Eagles</span></h2>
+          <h2 className="section-title mb-4">Despre <span className="text-accent">Eagles</span></h2>
           <p className="section-subtitle mx-auto">
-            For over two decades, the Riverside Eagles have been a powerhouse of high school basketball. Our program develops not just athletes, but leaders, scholars, and champions both on and off the court.
+            De peste două decenii, Riverside Eagles este o forță în baschetul de liceu. Programul nostru formează nu doar sportivi, ci lideri, elevi dedicați și campioni atât pe teren, cât și în afara lui.
           </p>
         </motion.div>
 
@@ -72,15 +72,15 @@ const AboutSection = () => {
           className="grid md:grid-cols-2 gap-8"
         >
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Our Mission</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Misiunea noastră</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To foster athletic excellence, teamwork, and sportsmanship while preparing young athletes for success beyond the court. We believe in hard work, discipline, and the power of unity.
+              Să promovăm excelența sportivă, spiritul de echipă și fair-play-ul, pregătindu-i pe tinerii sportivi pentru succes dincolo de teren. Credem în muncă, disciplină și puterea unității.
             </p>
           </div>
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Our Goals</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Obiectivele noastre</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Win the state championship, maintain a team GPA above 3.5, send players to college programs, and build character that lasts a lifetime. Every practice, every game, every moment counts.
+              Câștigarea campionatului de stat, menținerea mediei echipei peste 3.5, trimiterea jucători în programe universitare și construirea unui caracter de durată. Fiecare antrenament, fiecare meci, fiecare moment contează.
             </p>
           </div>
         </motion.div>

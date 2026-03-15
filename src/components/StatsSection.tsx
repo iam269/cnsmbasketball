@@ -2,12 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const teamStats = [
-  { label: "Points Per Game", value: 78.4, max: 100 },
-  { label: "Assists Per Game", value: 18.2, max: 30 },
-  { label: "Rebounds Per Game", value: 34.6, max: 50 },
-  { label: "Steals Per Game", value: 8.3, max: 15 },
-  { label: "3PT %", value: 38.5, max: 100 },
-  { label: "FT %", value: 76.8, max: 100 },
+  { label: "Puncte pe meci", value: 78.4, max: 100 },
+  { label: "Pase decisive pe meci", value: 18.2, max: 30 },
+  { label: "Recuperări pe meci", value: 34.6, max: 50 },
+  { label: "Interceptări pe meci", value: 8.3, max: 15 },
+  { label: "% la 3 puncte", value: 38.5, max: 100 },
+  { label: "% la libere", value: 76.8, max: 100 },
 ];
 
 const winLoss = { wins: 22, losses: 4 };
@@ -27,8 +27,8 @@ const StatsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Team <span className="text-accent">Statistics</span></h2>
-          <p className="section-subtitle mx-auto">Season averages and performance metrics.</p>
+          <h2 className="section-title mb-4">Statistici <span className="text-accent">echipă</span></h2>
+          <p className="section-subtitle mx-auto">Medii sezon și indicatori de performanță.</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -86,17 +86,17 @@ const StatsSection = () => {
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <span className="font-display text-5xl font-bold text-accent">{winRate}%</span>
-                <span className="font-display text-sm uppercase tracking-wider text-muted-foreground">Win Rate</span>
+                <span className="font-display text-sm uppercase tracking-wider text-muted-foreground">Rată victorii</span>
               </div>
             </div>
             <div className="flex gap-8 mt-8">
               <div className="text-center">
                 <p className="font-display text-3xl font-bold text-green-400">{winLoss.wins}</p>
-                <p className="text-muted-foreground text-sm uppercase tracking-wider">Wins</p>
+                <p className="text-muted-foreground text-sm uppercase tracking-wider">Victorii</p>
               </div>
               <div className="text-center">
                 <p className="font-display text-3xl font-bold text-destructive">{winLoss.losses}</p>
-                <p className="text-muted-foreground text-sm uppercase tracking-wider">Losses</p>
+                <p className="text-muted-foreground text-sm uppercase tracking-wider">Înfrângeri</p>
               </div>
             </div>
           </motion.div>
