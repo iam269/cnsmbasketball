@@ -41,7 +41,7 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Despre <span className="text-accent">echipa CNSM</span></h2>
+          <h2 className="section-title mb-4">Despre <span className="text-accent">echipă</span></h2>
           <p className="section-subtitle mx-auto">
             Echipa de baschet a Colegiului Național „Ștefan cel Mare” Târgu Neamț este un simbol al dedicării și al spiritului de competiție. Formăm nu doar sportivi, ci lideri, elevi dedicați și campioni atât pe teren, cât și în afara lui.
           </p>
@@ -80,7 +80,7 @@ const AboutSection = () => {
           <div className="card-glass p-8">
             <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Obiectivele noastre</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Câștigarea campionatului de stat, menținerea mediei echipei peste 3.5, trimiterea jucători în programe universitare și construirea unui caracter de durată. Fiecare antrenament, fiecare meci, fiecare moment contează.
+              Să creștem în fiecare sezon, să formăm jucători care respectă valorile baschetului și să reprezentăm cu mândrie Colegiul Național „Ștefan cel Mare” în toate competițiile. Fiecare antrenament și fiecare meci sunt pași spre o echipă mai unită și mai puternică.
             </p>
           </div>
         </motion.div>

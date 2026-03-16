@@ -43,7 +43,7 @@ const Navbar = () => {
             <Trophy className="w-5 h-5 text-accent" />
           </div>
           <span className="font-display text-xl font-bold uppercase tracking-wider text-foreground">
-            Eagles <span className="text-accent">Basketball</span>
+            Baschet <span className="text-accent">CNSM</span>
           </span>
         </button>
 

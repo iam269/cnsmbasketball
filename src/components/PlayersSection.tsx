@@ -100,7 +100,7 @@ const PlayersSection = () => {
         >
           <div className="yellow-bar mx-auto mb-6" />
           <h2 className="section-title mb-4">Cunoaște <span className="text-accent">lotul</span></h2>
-          <p className="section-subtitle mx-auto">Inima Eagles — atinge o carte pentru statistici jucător.</p>
+          <p className="section-subtitle mx-auto">Inima Echipei — atinge o carte pentru statistici jucător.</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

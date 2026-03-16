@@ -11,6 +11,21 @@ const galleryImages = [
   { src: "https://images.unsplash.com/photo-1559692048-79a3f837883d?w=600&h=400&fit=crop", alt: "Jucători de baschet" },
 ];
 
+const gameVideos = [
+  {
+    title: "Highlights meci acasă",
+    embedUrl: "https://www.youtube.com/embed/oyjYgmsM00I",
+  },
+  {
+    title: "Atmosferă în tribune",
+    embedUrl: "https://www.youtube.com/embed/2VwsvrPFr9w",
+  },
+  {
+    title: "Antrenament intens CNSM",
+    embedUrl: "https://www.youtube.com/embed/O1JXIvG6GRk",
+  },
+];
+
 const GallerySection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -25,11 +40,12 @@ const GallerySection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Galerie <span className="text-accent">foto</span></h2>
-          <p className="section-subtitle mx-auto">Momente și highlight-uri din sezon.</p>
+          <h2 className="section-title mb-4">Galerie <span className="text-accent">media</span></h2>
+          <p className="section-subtitle mx-auto">Momente, highlight-uri și videoclipuri din meciurile și antrenamentele echipei.</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {/* Fotografii */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
           {galleryImages.map((img, i) => (
             <motion.button
               key={i}
@@ -46,6 +62,37 @@ const GallerySection = () => {
             </motion.button>
           ))}
         </div>
+
+        {/* Videoclipuri meciuri */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="space-y-6"
+        >
+          <h3 className="font-display text-2xl md:text-3xl font-bold uppercase text-center">
+            Videoclipuri <span className="text-accent">meciuri</span>
+          </h3>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto">
+            Revede momentele importante din partidele jucate: faze spectaculoase, atmosferă din sală și secvențe de joc.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {gameVideos.map((video) => (
+              <div
+                key={video.embedUrl}
+                className="card-glass overflow-hidden rounded-xl aspect-video"
+              >
+                <iframe
+                  src={video.embedUrl}
+                  title={video.title}
+                  className="w-full h-full rounded-xl"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
 
       {/* Lightbox */}
