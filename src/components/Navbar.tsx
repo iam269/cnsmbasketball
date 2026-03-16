@@ -53,7 +53,7 @@ const Navbar = () => {
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className="text-sm font-medium uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm font-medium uppercase tracking-wider text-primary-foreground hover:text-accent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.label}
             </button>
@@ -80,7 +80,7 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="text-left font-display text-lg uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors py-2"
+                  className="text-left font-display text-lg uppercase tracking-wider text-primary-foreground hover:text-accent transition-colors py-2"
                 >
                   {item.label}
                 </button>

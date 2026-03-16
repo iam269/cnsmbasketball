@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    /* Alb, albastru, galben */
+    /* Alb, albastru, galben - contrast mai puternic */
     --background: 0 0% 100%;
-    --foreground: 220 40% 12%;
+    --foreground: 220 40% 8%;
 
-    --card: 0 0% 99%;
-    --card-foreground: 220 40% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 12%;
+    --popover-foreground: 220 40% 8%;
 
-    --primary: 217 91% 50%;
+    --primary: 217 91% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 93% 55%;
-    --secondary-foreground: 220 40% 12%;
+    --secondary: 45 93% 52%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 220 12% 94%;
+    --muted-foreground: 220 25% 30%;
 
-    --accent: 45 93% 47%;
-    --accent-foreground: 220 40% 12%;
+    --accent: 45 93% 48%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84.2% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 217 91% 50%;
+    --border: 220 18% 80%;
+    --input: 220 18% 80%;
+    --ring: 217 91% 45%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 99%;
-    --sidebar-foreground: 220 40% 12%;
-    --sidebar-primary: 217 91% 50%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 40% 8%;
+    --sidebar-primary: 217 91% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 96%;
-    --sidebar-accent-foreground: 220 40% 12%;
-    --sidebar-border: 220 15% 90%;
-    --sidebar-ring: 217 91% 50%;
+    --sidebar-accent: 220 12% 94%;
+    --sidebar-accent-foreground: 220 40% 8%;
+    --sidebar-border: 220 18% 80%;
+    --sidebar-ring: 217 91% 45%;
 
-    /* Custom tokens - albastru și galben */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100% / 0.95), hsl(217 91% 50% / 0.15));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 20% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(217 91% 50%), hsl(45 93% 47%));
-    --shadow-glow: 0 0 30px hsl(217 91% 50% / 0.25);
-    --shadow-yellow: 0 0 30px hsl(45 93% 47% / 0.3);
+    /* Custom tokens - albastru și galben, mai intense */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 15% / 0.95), hsl(217 91% 45% / 0.4));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 15% 93%));
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 45%), hsl(45 93% 48%));
+    --shadow-glow: 0 0 40px hsl(217 91% 45% / 0.4);
+    --shadow-yellow: 0 0 40px hsl(45 93% 48% / 0.4);
   }
 }
 
