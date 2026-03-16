@@ -30,7 +30,7 @@ const TeamFooter = () => {
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Baschet Riverside High School — Formăm campioni din 2001.
+              Echipa de baschet a Colegiului Național „Ștefan cel Mare” Târgu Neamț.
             </p>
           </div>
 
@@ -67,9 +67,15 @@ const TeamFooter = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-6 text-center">
+        <div className="border-t border-border pt-6 text-center space-y-2">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Riverside Eagles Basketball. Toate drepturile rezervate.
+            © {new Date().getFullYear()} CNSM Baschet. Toate drepturile rezervate.
+          </p>
+          <p className="text-muted-foreground text-xs">
+            Colegiul Național „Ștefan cel Mare” Târgu Neamț —{" "}
+            <a href="https://cnsm.ro" target="_blank" rel="noreferrer" className="text-accent underline-offset-4 hover:underline">
+              cnsm.ro
+            </a>
           </p>
         </div>
       </div>

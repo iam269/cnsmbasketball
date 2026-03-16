@@ -73,17 +73,17 @@ const ContactSection = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                   <div>
-                    <p className="font-semibold">Sala Riverside High School</p>
-                    <p className="text-muted-foreground text-sm">1200 Eagle Drive, Riverside, CA 92501</p>
+                    <p className="font-semibold">Colegiul Național „Ștefan cel Mare”</p>
+                    <p className="text-muted-foreground text-sm">loc. Târgu Neamț, jud. Neamț, CP 615200, România</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-accent shrink-0" />
-                  <p className="text-muted-foreground">(951) 555-0123</p>
+                  <p className="text-muted-foreground">040-233-790-932</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-accent shrink-0" />
-                  <p className="text-muted-foreground">basketball@riversideeagles.edu</p>
+                  <p className="text-muted-foreground">info@cnsm.ro</p>
                 </div>
               </div>
             </div>

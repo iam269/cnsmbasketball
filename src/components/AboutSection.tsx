@@ -41,9 +41,9 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Despre <span className="text-accent">Eagles</span></h2>
+          <h2 className="section-title mb-4">Despre <span className="text-accent">echipa CNSM</span></h2>
           <p className="section-subtitle mx-auto">
-            De peste două decenii, Riverside Eagles este o forță în baschetul de liceu. Programul nostru formează nu doar sportivi, ci lideri, elevi dedicați și campioni atât pe teren, cât și în afara lui.
+            Echipa de baschet a Colegiului Național „Ștefan cel Mare” Târgu Neamț este un simbol al dedicării și al spiritului de competiție. Formăm nu doar sportivi, ci lideri, elevi dedicați și campioni atât pe teren, cât și în afara lui.
           </p>
         </motion.div>
 
