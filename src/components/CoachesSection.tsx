@@ -3,7 +3,12 @@ import { useRef } from "react";
 import { User } from "lucide-react";
 
 const coaches = [
-  { name: "Dumi Timofte", role: "Antrenor principal", desc: "" },
+  {
+    name: "Dumi Timofte",
+    role: "Antrenor principal",
+    desc:
+      "Antrenor tânăr și dedicat, format în spiritul baschetului modern. Aduce energie, disciplină și idei proaspete la fiecare antrenament, este aproape de jucători și îi încurajează să își depășească limitele, punând accent atât pe dezvoltarea tehnică, cât și pe cea mentală.",
+  },
 ];
 
 const CoachesSection = () => {
@@ -11,7 +16,7 @@ const CoachesSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="coaches" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -19,25 +24,31 @@ const CoachesSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Antrenori</h2>
-          <p className="section-subtitle mx-auto">Liderii din spatele succesului Eagles.</p>
+          <h2 className="section-title mb-4">Antrenor</h2>
+          <p className="section-subtitle mx-auto">Liderul din spatele echipei!</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="flex justify-center">
           {coaches.map((coach, i) => (
             <motion.div
               key={coach.name}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="card-glass p-8 text-center group hover:border-accent/30"
+              className="card-glass p-10 md:p-12 text-center group hover:border-accent/30 max-w-xl w-full"
             >
               <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/40 transition-colors">
                 <User className="w-12 h-12 text-accent" />
               </div>
-              <h3 className="font-display text-xl font-bold uppercase group-hover:text-accent transition-colors">{coach.name}</h3>
-              <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-4">{coach.role}</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">{coach.desc}</p>
+              <h3 className="font-display text-2xl md:text-3xl font-bold uppercase group-hover:text-accent transition-colors">
+                {coach.name}
+              </h3>
+              <p className="text-accent text-sm md:text-base font-semibold uppercase tracking-wider mb-4">
+                {coach.role}
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                {coach.desc}
+              </p>
             </motion.div>
           ))}
         </div>
