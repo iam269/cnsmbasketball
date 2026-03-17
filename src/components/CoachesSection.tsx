@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const coaches = [
   {
@@ -14,6 +15,7 @@ const coaches = [
 const CoachesSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const navigate = useNavigate();
 
   return (
     <section id="coaches" className="py-24 bg-muted/30">
@@ -30,15 +32,16 @@ const CoachesSection = () => {
 
         <div className="flex justify-center">
           {coaches.map((coach, i) => (
-            <motion.div
+            <motion.button
               key={coach.name}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="card-glass p-10 md:p-12 text-center group hover:border-accent/30 max-w-xl w-full"
+              onClick={() => navigate("/coach")}
+              className="card-glass p-14 md:p-20 text-center group hover:border-accent/30 max-w-2xl w-full cursor-pointer"
             >
-              <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/40 transition-colors">
-                <User className="w-12 h-12 text-accent" />
+              <div className="w-40 h-40 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary/40 transition-colors">
+                <User className="w-20 h-20 text-accent" />
               </div>
               <h3 className="font-display text-2xl md:text-3xl font-bold uppercase group-hover:text-accent transition-colors">
                 {coach.name}
@@ -49,7 +52,7 @@ const CoachesSection = () => {
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 {coach.desc}
               </p>
-            </motion.div>
+            </motion.button>
           ))}
         </div>
       </div>
