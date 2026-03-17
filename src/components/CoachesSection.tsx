@@ -3,9 +3,7 @@ import { useRef } from "react";
 import { User } from "lucide-react";
 
 const coaches = [
-  { name: "Antrenor David Harris", role: "Antrenor principal", desc: "Peste 20 de ani experiență. Fost jucător Divizia I, pasionat de dezvoltarea tinerilor talenți și construirea echipelor de campionat." },
-  { name: "Antrenoara Sarah Mitchell", role: "Antrenor secund", desc: "Fostă valoare colegială și specialistă în apărare. Se concentrează pe dezvoltarea jucătorilor, strategie și mentalitate de câștigător." },
-  { name: "Antrenor Mike Torres", role: "Pregătire fizică", desc: "Antrenor certificat pentru forță și condiționare, dedicat performanței atletice și prevenției accidentărilor." },
+  { name: "Dumi Timofte", role: "Antrenor principal", desc: "" },
 ];
 
 const CoachesSection = () => {
