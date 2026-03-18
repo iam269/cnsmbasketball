@@ -12,7 +12,6 @@ import ResultsSection from "@/components/ResultsSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import GallerySection from "@/components/GallerySection";
 import CoachesSection from "@/components/CoachesSection";
-import FansSection from "@/components/FansSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import NewsSection from "@/components/NewsSection";
 import ContactSection from "@/components/ContactSection";
@@ -60,7 +59,6 @@ const Index = () => {
           <AchievementsSection />
           <GallerySection />
           <CoachesSection />
-          <FansSection />
           <SponsorsSection />
           <NewsSection />
           <ContactSection />
