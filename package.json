@@ -2,6 +2,7 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://iam269.github.io/cnsmbasketball",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +12,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build:prod && gh-pages -d dist",
+    "build:prod": "vite build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
