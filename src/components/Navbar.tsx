@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 import iconImage from "../assets/icon.png";
 
-const navItems = ["Home", "Team", "Players", "Schedule", "Gallery", "News", "Sponsors", "Contact"];
+const navItems = ["Acasă", "Echipă", "Jucători", "Program", "Galerie", "Noutăți", "Sponsori", "Contact"];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,11 +34,11 @@ const Navbar = () => {
         <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
           <img 
             src={iconImage} 
-            alt="CNSM Basketball" 
+            alt="CNSM Baschet" 
             className="w-10 h-10 rounded-full object-cover group-hover:shadow-[var(--shadow-glow)] transition-shadow"
           />
           <span className="font-display text-xl font-bold uppercase tracking-wider text-foreground">
-            CNSM <span className="text-accent">Basketball</span>
+            CNSM <span className="text-accent">Baschet</span>
           </span>
         </button>
 

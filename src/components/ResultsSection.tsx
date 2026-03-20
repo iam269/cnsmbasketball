@@ -22,8 +22,8 @@ const ResultsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Recent <span className="text-accent">Results</span></h2>
-          <p className="section-subtitle mx-auto">Latest game results and scoreboards.</p>
+          <h2 className="section-title mb-4">Rezultate <span className="text-accent">Recente</span></h2>
+          <p className="section-subtitle mx-auto">Cele mai recente rezultate și tabele de scoruri.</p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">
@@ -37,7 +37,7 @@ const ResultsSection = () => {
             >
               <div className="text-muted-foreground text-sm font-display uppercase w-16 shrink-0">{game.date}</div>
               <div className="flex-1">
-                <p className="font-display font-bold uppercase">Eagles vs {game.opponent}</p>
+                <p className="font-display font-bold uppercase">CNSM vs {game.opponent}</p>
               </div>
               <div className="flex items-center gap-2">
                 <span className={`font-display text-2xl font-bold ${game.won ? "text-accent" : "text-foreground"}`}>
@@ -48,7 +48,7 @@ const ResultsSection = () => {
                   {game.awayScore}
                 </span>
                 <span className={`ml-2 text-xs font-bold uppercase px-2 py-1 rounded ${game.won ? "bg-green-500/20 text-green-400" : "bg-destructive/20 text-destructive"}`}>
-                  {game.won ? "W" : "L"}
+                  {game.won ? "V" : "I"}
                 </span>
               </div>
             </motion.div>

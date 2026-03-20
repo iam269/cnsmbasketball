@@ -22,8 +22,8 @@ const NewsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Latest <span className="text-accent">News</span></h2>
-          <p className="section-subtitle mx-auto">Stay updated with Eagles basketball.</p>
+          <h2 className="section-title mb-4">Ultimele <span className="text-accent">Noutăți</span></h2>
+          <p className="section-subtitle mx-auto">Rămâi la curent cu baschetul CNSM.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -39,7 +39,7 @@ const NewsSection = () => {
               <h3 className="font-display text-xl font-bold uppercase mb-3 group-hover:text-accent transition-colors">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.excerpt}</p>
               <span className="inline-flex items-center gap-1 text-accent text-sm font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
-                Read More <ArrowRight className="w-4 h-4" />
+                Citește mai mult <ArrowRight className="w-4 h-4" />
               </span>
             </motion.article>
           ))}

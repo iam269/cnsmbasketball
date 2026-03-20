@@ -24,8 +24,8 @@ const AchievementsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Team <span className="text-accent">Achievements</span></h2>
-          <p className="section-subtitle mx-auto">A proud history of excellence on the court.</p>
+          <h2 className="section-title mb-4">Realizările <span className="text-accent">Echipei</span></h2>
+          <p className="section-subtitle mx-auto">O mândră istorie de excelență pe teren.</p>
         </motion.div>
 
         {/* Timeline */}

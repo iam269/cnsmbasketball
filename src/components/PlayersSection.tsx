@@ -3,14 +3,14 @@ import { useRef, useState } from "react";
 import { User } from "lucide-react";
 
 const players = [
-  { name: "Marcus Johnson", position: "Point Guard", number: 1, height: "6'1\"", ppg: 18.5, apg: 7.2, rpg: 3.1 },
-  { name: "Devon Williams", position: "Shooting Guard", number: 3, height: "6'3\"", ppg: 15.8, apg: 3.4, rpg: 4.0 },
-  { name: "Jaylen Carter", position: "Small Forward", number: 7, height: "6'5\"", ppg: 22.1, apg: 2.8, rpg: 6.5 },
-  { name: "Isaiah Thompson", position: "Power Forward", number: 21, height: "6'7\"", ppg: 14.2, apg: 1.9, rpg: 8.3 },
-  { name: "Tyler Robinson", position: "Center", number: 34, height: "6'9\"", ppg: 12.6, apg: 1.2, rpg: 10.1 },
-  { name: "Andre Davis", position: "Point Guard", number: 11, height: "5'11\"", ppg: 9.8, apg: 5.5, rpg: 2.4 },
-  { name: "Chris Morgan", position: "Shooting Guard", number: 15, height: "6'2\"", ppg: 11.3, apg: 2.1, rpg: 3.7 },
-  { name: "Ryan Mitchell", position: "Small Forward", number: 22, height: "6'4\"", ppg: 10.5, apg: 2.6, rpg: 5.2 },
+  { name: "Marcus Johnson", position: "Fond de Terrain", number: 1, height: "1.85m", ppg: 18.5, apg: 7.2, rpg: 3.1 },
+  { name: "Devon Williams", position: "Extremă", number: 3, height: "1.90m", ppg: 15.8, apg: 3.4, rpg: 4.0 },
+  { name: "Jaylen Carter", position: "Aripă", number: 7, height: "1.96m", ppg: 22.1, apg: 2.8, rpg: 6.5 },
+  { name: "Isaiah Thompson", position: "Pivot", number: 21, height: "2.01m", ppg: 14.2, apg: 1.9, rpg: 8.3 },
+  { name: "Tyler Robinson", position: "Centru", number: 34, height: "2.06m", ppg: 12.6, apg: 1.2, rpg: 10.1 },
+  { name: "Andre Davis", position: "Fond de Terrain", number: 11, height: "1.80m", ppg: 9.8, apg: 5.5, rpg: 2.4 },
+  { name: "Chris Morgan", position: "Extremă", number: 15, height: "1.88m", ppg: 11.3, apg: 2.1, rpg: 3.7 },
+  { name: "Ryan Mitchell", position: "Aripă", number: 22, height: "1.93m", ppg: 10.5, apg: 2.6, rpg: 5.2 },
 ];
 
 const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: number; inView: boolean }) => {
@@ -47,8 +47,8 @@ const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: numbe
           <div className="p-5">
             <h3 className="font-display text-lg font-bold uppercase group-hover:text-accent transition-colors">{player.name}</h3>
             <p className="text-accent text-sm font-semibold uppercase tracking-wider">{player.position}</p>
-            <p className="text-muted-foreground text-sm mt-1">Height: {player.height}</p>
-            <p className="text-muted-foreground text-xs mt-2 italic">Tap to see stats →</p>
+            <p className="text-muted-foreground text-sm mt-1">Înălțime: {player.height}</p>
+            <p className="text-muted-foreground text-xs mt-2 italic">Apsați pentru statistici →</p>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: numbe
               </div>
             ))}
           </div>
-          <p className="text-muted-foreground text-xs mt-4 italic">Tap to flip back</p>
+          <p className="text-muted-foreground text-xs mt-4 italic">Apsați pentru a întoarce</p>
         </div>
       </motion.div>
     </motion.div>
@@ -95,8 +95,8 @@ const PlayersSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Meet the <span className="text-accent">Roster</span></h2>
-          <p className="section-subtitle mx-auto">The heart and soul of the Eagles — tap a card to see player stats.</p>
+          <h2 className="section-title mb-4">Cunoaște <span className="text-accent">Lotul</span></h2>
+          <p className="section-subtitle mx-auto">Inima și sufletul echipei CNSM — apasă pe o carte pentru a vedea statistici.</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

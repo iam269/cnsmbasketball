@@ -25,8 +25,8 @@ const GallerySection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Photo <span className="text-accent">Gallery</span></h2>
-          <p className="section-subtitle mx-auto">Highlights and moments from the season.</p>
+          <h2 className="section-title mb-4">Galerie <span className="text-accent">Foto</span></h2>
+          <p className="section-subtitle mx-auto">Momente și aspecte importante din sezon.</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -41,7 +41,7 @@ const GallerySection = () => {
             >
               <img src={img.src} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
-                <span className="text-foreground font-display uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">View</span>
+                <span className="text-foreground font-display uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Vezi</span>
               </div>
             </motion.button>
           ))}

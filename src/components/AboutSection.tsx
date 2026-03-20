@@ -4,16 +4,15 @@ import { useRef, useEffect, useState } from "react";
 import { Target, Award, Users } from "lucide-react";
 
 const stats = [
-  { label: "Years Active", value: 25, icon: Target },
-  { label: "Championships", value: 8, icon: Award },
-  { label: "Total Wins", value: 342, icon: Users },
+  { label: "Ani de Activitate", value: 25, icon: Target },
+  { label: "Campionate", value: 8, icon: Award },
+  { label: "Victorii Totale", value: 342, icon: Users },
 ];
 
 const Counter = ({ target, inView }: { target: number; inView: boolean }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
     if (!inView) return;
-    let start = 0;
     const duration = 2000;
     const step = (timestamp: number, startTime?: number) => {
       const st = startTime ?? timestamp;
@@ -41,9 +40,9 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">About the <span className="text-accent">Eagles</span></h2>
+          <h2 className="section-title mb-4">Despre <span className="text-accent">CNSM</span></h2>
           <p className="section-subtitle mx-auto">
-            For over two decades, the Riverside Eagles have been a powerhouse of high school basketball. Our program develops not just athletes, but leaders, scholars, and champions both on and off the court.
+            De peste două decenii, CNSM Baschet a fost o forță a baschetului. Programul nostru dezvoltă nu doar sportivi, ci și lideri, campioni pe și în afara terenului.
           </p>
         </motion.div>
 
@@ -72,15 +71,15 @@ const AboutSection = () => {
           className="grid md:grid-cols-2 gap-8"
         >
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Our Mission</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Misiunea Noastră</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To foster athletic excellence, teamwork, and sportsmanship while preparing young athletes for success beyond the court. We believe in hard work, discipline, and the power of unity.
+              Să cultivăm excelența sportivă, munca în echipă și sportivitatea pregătind tinerii sportivi pentru succes dincolo de teren. Credem în munca asiduă, disciplină și puterea unității.
             </p>
           </div>
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Our Goals</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Obiectivele Noastre</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Win the state championship, maintain a team GPA above 3.5, send players to college programs, and build character that lasts a lifetime. Every practice, every game, every moment counts.
+              Să câștigăm campionatul, să menținem o medie a echipei peste 8.0, să trimitem jucătorii la programe universitare și să construim caracter pentru o viață. Fiecare antrenament, fiecare meci contează.
             </p>
           </div>
         </motion.div>

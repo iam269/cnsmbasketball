@@ -1,12 +1,12 @@
 import { Trophy, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 
 const footerLinks = [
-  { label: "Home", id: "home" },
-  { label: "Team", id: "team" },
-  { label: "Players", id: "players" },
-  { label: "Schedule", id: "schedule" },
-  { label: "Gallery", id: "gallery" },
-  { label: "News", id: "news" },
+  { label: "Acasă", id: "home" },
+  { label: "Echipă", id: "team" },
+  { label: "Jucători", id: "players" },
+  { label: "Program", id: "schedule" },
+  { label: "Galerie", id: "gallery" },
+  { label: "Noutăți", id: "news" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -26,17 +26,17 @@ const TeamFooter = () => {
                 <Trophy className="w-5 h-5 text-accent" />
               </div>
               <span className="font-display text-lg font-bold uppercase tracking-wider">
-                Eagles <span className="text-accent">Basketball</span>
+                CNSM <span className="text-accent">Baschet</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Riverside High School Basketball — Building champions since 2001.
+              CNSM Baschet — Construim campioni din 2001.
             </p>
           </div>
 
           {/* Quick links */}
           <div>
-            <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Quick Links</h4>
+            <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Link-uri Rapide</h4>
             <div className="grid grid-cols-2 gap-2">
               {footerLinks.map((link) => (
                 <button
@@ -52,7 +52,7 @@ const TeamFooter = () => {
 
           {/* Social */}
           <div>
-            <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Follow Us</h4>
+            <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Urmărește-ne</h4>
             <div className="flex gap-3">
               {[Instagram, Twitter, Facebook, Youtube].map((Icon, i) => (
                 <a
@@ -69,7 +69,7 @@ const TeamFooter = () => {
 
         <div className="border-t border-border pt-6 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Riverside Eagles Basketball. All rights reserved.
+            © {new Date().getFullYear()} CNSM Baschet. Toate drepturile rezervate.
           </p>
         </div>
       </div>

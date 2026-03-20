@@ -21,8 +21,8 @@ const CoachesSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Coaching <span className="text-accent">Staff</span></h2>
-          <p className="section-subtitle mx-auto">The leaders behind the Eagles' success.</p>
+          <h2 className="section-title mb-4">Staff de <span className="text-accent">Antrenament</span></h2>
+          <p className="section-subtitle mx-auto">Liderii din spatele succesului CNSM.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

@@ -3,12 +3,12 @@ import { useRef, useState, useEffect } from "react";
 import { Calendar, MapPin, Clock } from "lucide-react";
 
 const games = [
-  { date: "2026-03-15T19:00:00", opponent: "Westlake Warriors", location: "Home — Eagles Arena" },
-  { date: "2026-03-22T18:30:00", opponent: "Central Lions", location: "Away — Lions Den" },
-  { date: "2026-03-29T19:00:00", opponent: "Northside Hawks", location: "Home — Eagles Arena" },
-  { date: "2026-04-05T18:00:00", opponent: "Eastview Panthers", location: "Away — Panther Court" },
-  { date: "2026-04-12T19:30:00", opponent: "Southridge Wolves", location: "Home — Eagles Arena" },
-  { date: "2026-04-19T18:30:00", opponent: "Valley Titans", location: "Away — Titan Gym" },
+  { date: "2026-03-15T19:00:00", opponent: "Westlake Warriors", location: "Acasă — Sala CNSM" },
+  { date: "2026-03-22T18:30:00", opponent: "Central Lions", location: "Deplasare — Sala Central" },
+  { date: "2026-03-29T19:00:00", opponent: "Northside Hawks", location: "Acasă — Sala CNSM" },
+  { date: "2026-04-05T18:00:00", opponent: "Eastview Panthers", location: "Deplasare — Sala Est" },
+  { date: "2026-04-12T19:30:00", opponent: "Southridge Wolves", location: "Acasă — Sala CNSM" },
+  { date: "2026-04-19T18:30:00", opponent: "Valley Titans", location: "Deplasare — Sala Valley" },
 ];
 
 const Countdown = ({ targetDate }: { targetDate: string }) => {
@@ -67,8 +67,8 @@ const ScheduleSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Upcoming <span className="text-accent">Matches</span></h2>
-          <p className="section-subtitle mx-auto">Upcoming games for the 2025–26 season. Come support your Eagles!</p>
+          <h2 className="section-title mb-4">Meciuri <span className="text-accent">Următoare</span></h2>
+          <p className="section-subtitle mx-auto">Următoarele meciuri pentru sezonul 2025–26. Vino să susții CNSM!</p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-4">

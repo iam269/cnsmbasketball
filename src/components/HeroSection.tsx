@@ -78,15 +78,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="text-accent font-display text-lg md:text-xl uppercase tracking-[0.3em] mb-4">
-            Official Website
+            Site Oficial
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold uppercase leading-tight mb-4">
-            Welcome to
-            <span className="block text-gradient">Eagles</span>
-            Basketball
+            Bine ai venit la
+            <span className="block text-gradient">CNSM</span>
+            Baschet
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Official Website of the Riverside High School Basketball Team — Where Champions Are Made
+            Site-ul oficial al echipei de baschet CNSM — unde campionii sunt făcuți
           </p>
         </motion.div>
 
@@ -97,13 +97,13 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button onClick={() => scrollTo("players")} className="btn-accent">
-            View Roster
+            Vezi Lotul
           </button>
           <button onClick={() => scrollTo("schedule")} className="btn-primary">
-            Latest Games
+            Ultimele Meciuri
           </button>
           <button onClick={() => scrollTo("contact")} className="btn-primary border border-primary bg-transparent hover:bg-primary/20">
-            Join the Team
+            Alătură-te Echipei
           </button>
         </motion.div>
       </div>

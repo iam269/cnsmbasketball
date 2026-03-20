@@ -24,8 +24,8 @@ const FansSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Fan <span className="text-accent">Zone</span></h2>
-          <p className="section-subtitle mx-auto">Follow us on social media and be part of the Eagles community.</p>
+          <h2 className="section-title mb-4">Zona <span className="text-accent">Fanilor</span></h2>
+          <p className="section-subtitle mx-auto">Urmărește-ne pe rețelele sociale și fii parte din comunitatea CNSM.</p>
         </motion.div>
 
         {/* Social links */}
