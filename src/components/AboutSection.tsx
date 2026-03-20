@@ -4,9 +4,9 @@ import { useRef, useEffect, useState } from "react";
 import { Target, Award, Users } from "lucide-react";
 
 const stats = [
-  { label: "Ani activi", value: 25, icon: Target },
-  { label: "Campionate", value: 8, icon: Award },
-  { label: "Victorii total", value: 342, icon: Users },
+  { label: "Years Active", value: 25, icon: Target },
+  { label: "Championships", value: 8, icon: Award },
+  { label: "Total Wins", value: 342, icon: Users },
 ];
 
 const Counter = ({ target, inView }: { target: number; inView: boolean }) => {
@@ -41,9 +41,9 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Despre <span className="text-accent">echipă</span></h2>
+          <h2 className="section-title mb-4">About the <span className="text-accent">Eagles</span></h2>
           <p className="section-subtitle mx-auto">
-            Echipa de baschet a Colegiului Național „Ștefan cel Mare” Târgu Neamț este un simbol al dedicării și al spiritului de competiție. Formăm nu doar sportivi, ci lideri, elevi dedicați și campioni atât pe teren, cât și în afara lui.
+            For over two decades, the Riverside Eagles have been a powerhouse of high school basketball. Our program develops not just athletes, but leaders, scholars, and champions both on and off the court.
           </p>
         </motion.div>
 
@@ -72,15 +72,15 @@ const AboutSection = () => {
           className="grid md:grid-cols-2 gap-8"
         >
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Misiunea noastră</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Să promovăm excelența sportivă, spiritul de echipă și fair-play-ul, pregătindu-i pe tinerii sportivi pentru succes dincolo de teren. Credem în muncă, disciplină și puterea unității.
+              To foster athletic excellence, teamwork, and sportsmanship while preparing young athletes for success beyond the court. We believe in hard work, discipline, and the power of unity.
             </p>
           </div>
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Obiectivele noastre</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Our Goals</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Să creștem în fiecare sezon, să formăm jucători care respectă valorile baschetului și să reprezentăm cu mândrie Colegiul Național „Ștefan cel Mare” în toate competițiile. Fiecare antrenament și fiecare meci sunt pași spre o echipă mai unită și mai puternică.
+              Win the state championship, maintain a team GPA above 3.5, send players to college programs, and build character that lasts a lifetime. Every practice, every game, every moment counts.
             </p>
           </div>
         </motion.div>

@@ -19,8 +19,8 @@ const SponsorsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Sponsorii <span className="text-accent">noștri</span></h2>
-          <p className="section-subtitle mx-auto">Mulțumim partenerilor care fac totul posibil.</p>
+          <h2 className="section-title mb-4">Our <span className="text-accent">Sponsors</span></h2>
+          <p className="section-subtitle mx-auto">Thank you to our amazing partners who make it all possible.</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">

@@ -12,9 +12,9 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Teren de baschet" className="w-full h-full object-cover" loading="eager" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-background/70 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/15 to-transparent" />
+        <img src={heroBg} alt="Basketball court" className="w-full h-full object-cover" loading="eager" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
       </div>
 
       {/* Animated spotlight lights */}
@@ -76,19 +76,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-4"
         >
-          <p className="text-accent font-display text-sm sm:text-base md:text-lg uppercase tracking-[0.3em]">
-            Echipa de baschet CNSM
+          <p className="text-accent font-display text-lg md:text-xl uppercase tracking-[0.3em] mb-4">
+            Official Website
           </p>
-          <h1 className="font-display font-bold uppercase leading-tight mb-2 text-balance text-3xl sm:text-4xl md:text-6xl lg:text-7xl">
-            Bine ați venit în
-            <span className="block text-gradient">
-              Echipa de baschet CNSM
-            </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold uppercase leading-tight mb-4">
+            Welcome to
+            <span className="block text-gradient">Eagles</span>
+            Basketball
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Site-ul oficial al echipei de baschet a Colegiului Național „Ștefan cel Mare” din Târgu Neamț
+            Official Website of the Riverside High School Basketball Team — Where Champions Are Made
           </p>
         </motion.div>
 
@@ -99,13 +97,13 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button onClick={() => scrollTo("players")} className="btn-accent">
-            Vezi lotul
+            View Roster
           </button>
           <button onClick={() => scrollTo("schedule")} className="btn-primary">
-            Ultimele meciuri
+            Latest Games
           </button>
-          <button onClick={() => scrollTo("contact")} className="btn-primary border border-primary bg-transparent hover:bg-primary/20 text-accent">
-            Alătură-te echipei
+          <button onClick={() => scrollTo("contact")} className="btn-primary border border-primary bg-transparent hover:bg-primary/20">
+            Join the Team
           </button>
         </motion.div>
       </div>
