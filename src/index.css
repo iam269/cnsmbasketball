@@ -52,6 +52,54 @@
     --shadow-glow: 0 0 30px hsl(215 80% 48% / 0.3);
     --shadow-yellow: 0 0 30px hsl(44 100% 58% / 0.3);
   }
+
+  .light {
+    --background: 210 20% 98%;
+    --foreground: 220 25% 10%;
+
+    --card: 210 20% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 210 20% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 215 80% 48%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 44 100% 58%;
+    --secondary-foreground: 220 40% 6%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 10% 40%;
+
+    --accent: 44 100% 58%;
+    --accent-foreground: 220 40% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 215 80% 48%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 220 25% 10%;
+    --sidebar-primary: 215 80% 48%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 220 25% 10%;
+    --sidebar-border: 220 15% 85%;
+    --sidebar-ring: 215 80% 48%;
+
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(210 20% 98% / 0.9), hsl(215 80% 48% / 0.2));
+    --gradient-card: linear-gradient(180deg, hsl(210 20% 100%), hsl(210 20% 96%));
+    --gradient-accent: linear-gradient(135deg, hsl(215 80% 48%), hsl(44 100% 58%));
+    --shadow-glow: 0 0 30px hsl(215 80% 48% / 0.2);
+    --shadow-yellow: 0 0 30px hsl(44 100% 58% / 0.2);
+  }
 }
 
 @layer base {
@@ -100,18 +148,33 @@
   }
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
+/* Scrollbar - Dark mode */
+.dark ::-webkit-scrollbar {
   width: 8px;
 }
-::-webkit-scrollbar-track {
+.dark ::-webkit-scrollbar-track {
   background: hsl(220 40% 6%);
 }
-::-webkit-scrollbar-thumb {
+.dark ::-webkit-scrollbar-thumb {
   background: hsl(220 25% 18%);
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover {
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: hsl(215 80% 48%);
+}
+
+/* Scrollbar - Light mode */
+.light ::-webkit-scrollbar {
+  width: 8px;
+}
+.light ::-webkit-scrollbar-track {
+  background: hsl(210 20% 95%);
+}
+.light ::-webkit-scrollbar-thumb {
+  background: hsl(220 15% 75%);
+  border-radius: 4px;
+}
+.light ::-webkit-scrollbar-thumb:hover {
   background: hsl(215 80% 48%);
 }
 
