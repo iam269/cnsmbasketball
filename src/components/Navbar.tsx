@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Trophy } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
+import iconImage from "../assets/icon.png";
 
 const navItems = ["Home", "Team", "Players", "Schedule", "Gallery", "News", "Sponsors", "Contact"];
 
@@ -31,11 +32,13 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center group-hover:shadow-[var(--shadow-glow)] transition-shadow">
-            <Trophy className="w-5 h-5 text-accent" />
-          </div>
+          <img 
+            src={iconImage} 
+            alt="CNSM Basketball" 
+            className="w-10 h-10 rounded-full object-cover group-hover:shadow-[var(--shadow-glow)] transition-shadow"
+          />
           <span className="font-display text-xl font-bold uppercase tracking-wider text-foreground">
-            Eagles <span className="text-accent">Basketball</span>
+            CNSM <span className="text-accent">Basketball</span>
           </span>
         </button>
 
