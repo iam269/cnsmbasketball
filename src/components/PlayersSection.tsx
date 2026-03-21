@@ -3,14 +3,15 @@ import { useRef, useState } from "react";
 import { User } from "lucide-react";
 
 const players = [
-  { name: "Marcus Johnson", position: "Fond de Terrain", number: 1, height: "1.85m", ppg: 18.5, apg: 7.2, rpg: 3.1 },
-  { name: "Devon Williams", position: "Extremă", number: 3, height: "1.90m", ppg: 15.8, apg: 3.4, rpg: 4.0 },
-  { name: "Jaylen Carter", position: "Aripă", number: 7, height: "1.96m", ppg: 22.1, apg: 2.8, rpg: 6.5 },
-  { name: "Isaiah Thompson", position: "Pivot", number: 21, height: "2.01m", ppg: 14.2, apg: 1.9, rpg: 8.3 },
-  { name: "Tyler Robinson", position: "Centru", number: 34, height: "2.06m", ppg: 12.6, apg: 1.2, rpg: 10.1 },
-  { name: "Andre Davis", position: "Fond de Terrain", number: 11, height: "1.80m", ppg: 9.8, apg: 5.5, rpg: 2.4 },
-  { name: "Chris Morgan", position: "Extremă", number: 15, height: "1.88m", ppg: 11.3, apg: 2.1, rpg: 3.7 },
-  { name: "Ryan Mitchell", position: "Aripă", number: 22, height: "1.93m", ppg: 10.5, apg: 2.6, rpg: 5.2 },
+  { name: "Vasiliu Mateo Ioan", position: "Extremă", number: 1, height: "1.85m", ppg: 18.5, apg: 7.2, rpg: 3.1 },
+  { name: "Iacob Dumitru Emanuel ", position: "Extremă", number: 3, height: "1.90m", ppg: 15.8, apg: 3.4, rpg: 4.0 },
+  { name: "Istrate David", position: "Aripă", number: 7, height: "1.96m", ppg: 22.1, apg: 2.8, rpg: 6.5 },
+  { name: "Ioniță Aurel Mihai", position: "Pivot", number: 21, height: "2.01m", ppg: 14.2, apg: 1.9, rpg: 8.3 },
+  { name: "Cepoi Dragoș Constantin", position: "Centru", number: 34, height: "2.06m", ppg: 12.6, apg: 1.2, rpg: 10.1 },
+  { name: "Stănica Luca Sebastian", position: "Fond de Terrain", number: 11, height: "1.80m", ppg: 9.8, apg: 5.5, rpg: 2.4 },
+  { name: "Hanganu Ștefan ", position: "Extremă", number: 15, height: "1.88m", ppg: 11.3, apg: 2.1, rpg: 3.7 },
+  { name: "Chioșa Constantin Adrian", position: "Aripă", number: 22, height: "1.93m", ppg: 10.5, apg: 2.6, rpg: 5.2 },
+  { name: "Birsan Cristian", position: "Aripă", number: 22, height: "1.93m", ppg: 10.5, apg: 2.6, rpg: 5.2 },
 ];
 
 const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: number; inView: boolean }) => {

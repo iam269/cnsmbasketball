@@ -39,7 +39,7 @@ const Index = () => {
           <ResultsSection />
           <AchievementsSection />
           <GallerySection />
-          <CoachesSection />
+          <CoachesSection id="coaches" />
           <FansSection />
           <SponsorsSection />
           <NewsSection />

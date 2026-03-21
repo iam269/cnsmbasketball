@@ -143,6 +143,23 @@
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-accent);
   }
+  .text-gradient-animated {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #1e40af, #ffffff, #eab308);
+    background-size: 200% auto;
+    animation: gradient-shift 5s ease-in-out infinite;
+  }
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   .perspective-1000 {
     perspective: 1000px;
   }

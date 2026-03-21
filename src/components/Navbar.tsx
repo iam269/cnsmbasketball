@@ -6,14 +6,14 @@ import { NavLink } from "./NavLink";
 import iconImage from "../assets/icon.png";
 
 const navItems = [
-  { label: "Acasă", sectionId: "home" },
-  { label: "Echipă", sectionId: "team" },
-  { label: "Jucători", sectionId: "players" },
-  { label: "Program", sectionId: "schedule" },
-  { label: "Galerie", sectionId: "gallery" },
-  { label: "Noutăți", sectionId: "news" },
-  { label: "Sponsori", sectionId: "sponsors" },
-  { label: "Contact", sectionId: "contact" },
+  { label: "Acasă", path: "/" },
+  { label: "Echipă", path: "/team" },
+  { label: "Jucători", path: "/players" },
+  { label: "Program", path: "/schedule" },
+  { label: "Galerie", path: "/gallery" },
+  { label: "Noutăți", path: "/news" },
+  { label: "Sponsori", path: "/sponsors" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <NavLink to="#home" className="flex items-center gap-2 group">
+        <NavLink to="/" className="flex items-center gap-2 group">
           <img 
             src={iconImage} 
             alt="CNSM Baschet" 
@@ -50,8 +50,8 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <NavLink
-              key={item.sectionId}
-              to={`#${item.sectionId}`}
+              key={item.path}
+              to={item.path}
               className="text-sm font-medium uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
               activeClassName="text-accent after:w-full"
             >
@@ -79,8 +79,8 @@ const Navbar = () => {
             <div className="container mx-auto py-4 px-4 flex flex-col gap-4">
               {navItems.map((item) => (
                 <NavLink
-                  key={item.sectionId}
-                  to={`#${item.sectionId}`}
+                  key={item.path}
+                  to={item.path}
                   onClick={() => setIsOpen(false)}
                   className="text-left font-display text-lg uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors py-2"
                   activeClassName="text-accent"

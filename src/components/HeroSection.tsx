@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import basketball from "@/assets/basketball.png";
 
 const HeroSection = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -77,12 +75,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-accent font-display text-lg md:text-xl uppercase tracking-[0.3em] mb-4">
-            Site Oficial
-          </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold uppercase leading-tight mb-4">
             Bine ai venit la
-            <span className="block text-gradient">CNSM</span>
+            <span className="block text-gradient-animated">CNSM</span>
             Baschet
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
@@ -96,27 +91,30 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <button onClick={() => scrollTo("players")} className="btn-accent">
+          <NavLink to="/players" className="btn-accent">
             Vezi Lotul
-          </button>
-          <button onClick={() => scrollTo("schedule")} className="btn-primary">
+          </NavLink>
+          <NavLink to="/schedule" className="btn-primary">
             Ultimele Meciuri
-          </button>
-          <button onClick={() => scrollTo("contact")} className="btn-primary border border-primary bg-transparent hover:bg-primary/20">
+          </NavLink>
+          <NavLink to="/contact" className="bg-background text-primary border-2 border-primary px-8 py-3 rounded-md font-display font-semibold uppercase tracking-wider">
             Alătură-te Echipei
-          </button>
+          </NavLink>
         </motion.div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.button
-        onClick={() => scrollTo("team")}
+      <NavLink
+        to="/team"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-accent transition-colors"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
       >
-        <ChevronDown className="w-8 h-8" />
-      </motion.button>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <ChevronDown className="w-8 h-8" />
+        </motion.div>
+      </NavLink>
     </section>
   );
 };
