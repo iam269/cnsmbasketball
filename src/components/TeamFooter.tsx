@@ -1,4 +1,5 @@
-import { Trophy, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import icon from "@/assets/icon.png";
 
 const footerLinks = [
   { label: "Acasă", id: "home" },
@@ -22,9 +23,11 @@ const TeamFooter = () => {
           {/* Logo */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Trophy className="w-5 h-5 text-accent" />
-              </div>
+              <img 
+                src={icon} 
+                alt="CNSM Baschet" 
+                className="w-10 h-10 rounded-full"
+              />
               <span className="font-display text-lg font-bold uppercase tracking-wider">
                 CNSM <span className="text-accent">Baschet</span>
               </span>

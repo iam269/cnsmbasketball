@@ -6,13 +6,12 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import PlayersSection from "@/components/PlayersSection";
 import HighlightsSection from "@/components/HighlightsSection";
-import StatsSection from "@/components/StatsSection";
+
 import ScheduleSection from "@/components/ScheduleSection";
 import ResultsSection from "@/components/ResultsSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import GallerySection from "@/components/GallerySection";
 import CoachesSection from "@/components/CoachesSection";
-import FansSection from "@/components/FansSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import NewsSection from "@/components/NewsSection";
 import ContactSection from "@/components/ContactSection";
@@ -34,13 +33,11 @@ const Index = () => {
           <AboutSection />
           <PlayersSection />
           <HighlightsSection />
-          <StatsSection />
           <ScheduleSection />
           <ResultsSection />
           <AchievementsSection />
           <GallerySection />
           <CoachesSection id="coaches" />
-          <FansSection />
           <SponsorsSection />
           <NewsSection />
           <ContactSection />

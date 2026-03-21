@@ -1,9 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { ExternalLink } from "lucide-react";
 
 const sponsors = [
-  "SportsPro Athletics", "Eagle Eye Optics", "Victory Nutrition", "GameDay Gear",
-  "Champion Auto", "Peak Performance", "Riverside Medical", "Blue Line Sports",
+  { name: "CNSM", desc: "Colegiul Național Ștefan cel Mare", url: "https://cnsm.ro" },
+  { name: "Ioniță Aurel Mihai", desc: "Dezvoltator Web", url: "https://ionitaaurelmihai.vercel.app" },
 ];
 
 const SponsorsSection = () => {
@@ -23,19 +24,26 @@ const SponsorsSection = () => {
           <p className="section-subtitle mx-auto">Mulțumim partenerilor noștri care fac totul posibil.</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {sponsors.map((sponsor, i) => (
-            <motion.div
-              key={sponsor}
+            <motion.a
+              key={sponsor.name}
+              href={sponsor.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.3, delay: i * 0.08 }}
-              className="card-glass p-6 flex items-center justify-center h-28 hover:border-accent/40 hover:shadow-[var(--shadow-yellow)] transition-all group cursor-pointer"
+              transition={{ duration: 0.3, delay: i * 0.15 }}
+              className="card-glass p-8 flex items-center justify-between hover:border-accent/40 hover:shadow-[var(--shadow-yellow)] transition-all group cursor-pointer"
             >
-              <span className="font-display text-sm md:text-base font-bold uppercase text-muted-foreground group-hover:text-accent transition-colors text-center tracking-wider">
-                {sponsor}
-              </span>
-            </motion.div>
+              <div>
+                <span className="font-display text-xl md:text-2xl font-bold uppercase text-accent group-hover:text-accent/80 transition-colors">
+                  {sponsor.name}
+                </span>
+                <p className="text-muted-foreground text-sm mt-1">{sponsor.desc}</p>
+              </div>
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors" />
+            </motion.a>
           ))}
         </div>
       </div>
