@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { Trophy, Medal, Star, Award } from "lucide-react";
 
 const achievements = [
-  { year: "2025", title: "Conference Champions", desc: "Back-to-back conference championship victory.", icon: Trophy },
-  { year: "2024", title: "State Tournament Semifinalists", desc: "First semifinal appearance in 10 years.", icon: Star },
-  { year: "2023", title: "Regional Champions", desc: "Dominated the regional tournament with a 4-0 record.", icon: Medal },
-  { year: "2021", title: "Holiday Invitational Champions", desc: "Won the prestigious 16-team holiday tournament.", icon: Award },
-  { year: "2019", title: "State Champions", desc: "Historic state championship — first in school history.", icon: Trophy },
-  { year: "2017", title: "100th Program Win", desc: "Celebrated the 100th win in program history.", icon: Star },
+  { year: "2025", title: "Locul 3 - Campionatul Județean Neamț", desc: "Ne-am clasat pe podiumul competiției județene, la doar 2 victorii de locul 1.", icon: Medal },
+  { year: "2025", title: "Meciuri Derby cu Roman și Piatra Neamț", desc: "Am întâlnit echipele puternice din județ, CSM Roman și BC Piatra Neamț, în fazele decisive.", icon: Trophy },
+  { year: "2024", title: "Locul 3 - Campionatul Județean Neamț", desc: "Am repetat performanța din anul precedent, confirmând potențialul echipei.", icon: Medal },
+  { year: "2024", title: "Participare la Faza Județeană", desc: "Ne-am calificat printre primele 4 echipe din județul Neamț.", icon: Star },
+  { year: "2023", title: "Dezvoltarea Echipei", desc: "Am construit o echipă competitivă, pregătită pentru provocările ligii judetene.", icon: Award },
+  { year: "2022", title: "Fondarea CNSM Baschet", desc: "Am pus bazele proiectului de baschet la Colegiul National Stefan cel Mare Targu Neamt.", icon: Trophy },
 ];
 
 const AchievementsSection = () => {

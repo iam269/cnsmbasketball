@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { User, ArrowRight } from "lucide-react";
 
 const coaches = [
-  { id: 1, name: "Timofte Dumitrel", role: "Antrenor Principal", desc: "Antrenor cu experienta vasta in baschet. A condus echipa la multiple victorii si titluri nationale." },];
+  { id: 1, name: "Timofte Dumitrel", role: "Antrenor Principal", desc: "Antrenor cu experienta in baschetul judetean. A condus echipa CNSM la doua podiumuri consecutive la Campionatul Judetean Neamt." },];
 const CoachesSection = ({ id }: { id?: string }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });

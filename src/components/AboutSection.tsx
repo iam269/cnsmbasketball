@@ -4,9 +4,9 @@ import { useRef, useEffect, useState } from "react";
 import { Target, Award, Users } from "lucide-react";
 
 const stats = [
-  { label: "Ani de Activitate", value: 25, icon: Target },
-  { label: "Campionate", value: 8, icon: Award },
-  { label: "Victorii Totale", value: 342, icon: Users },
+  { label: "Ani de Activitate", value: 4, icon: Target },
+  { label: "Podiumuri Județene", value: 2, icon: Award },
+  { label: "Meciuri Disputate", value: 23, icon: Users },
 ];
 
 const Counter = ({ target, inView }: { target: number; inView: boolean }) => {
@@ -42,7 +42,7 @@ const AboutSection = () => {
           <div className="yellow-bar mx-auto mb-6" />
           <h2 className="section-title mb-4">Despre <span className="text-accent">CNSM</span></h2>
           <p className="section-subtitle mx-auto">
-            De peste două decenii, CNSM Baschet a fost o forță a baschetului. Programul nostru dezvoltă nu doar sportivi, ci și lideri, campioni pe și în afara terenului.
+            Din 2022, CNSM Baschet Târgu Neamț a fost o forță în baschetul judetean. Programul nostru dezvoltă nu doar sportivi, ci și lideri, campioni pe și în afara terenului.
           </p>
         </motion.div>
 

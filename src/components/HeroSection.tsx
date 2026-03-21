@@ -81,7 +81,7 @@ const HeroSection = () => {
             Baschet
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Site-ul oficial al echipei de baschet CNSM — unde campionii sunt făcuți
+            Site-ul oficial al echipei de baschet CNSM Târgu Neamț — unde pasiunea pentru baschet întâlnește performanța
           </p>
         </motion.div>
 
