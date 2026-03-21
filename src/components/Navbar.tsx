@@ -2,9 +2,19 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
+import { NavLink } from "./NavLink";
 import iconImage from "../assets/icon.png";
 
-const navItems = ["Acasă", "Echipă", "Jucători", "Program", "Galerie", "Noutăți", "Sponsori", "Contact"];
+const navItems = [
+  { label: "Acasă", sectionId: "home" },
+  { label: "Echipă", sectionId: "team" },
+  { label: "Jucători", sectionId: "players" },
+  { label: "Program", sectionId: "schedule" },
+  { label: "Galerie", sectionId: "gallery" },
+  { label: "Noutăți", sectionId: "news" },
+  { label: "Sponsori", sectionId: "sponsors" },
+  { label: "Contact", sectionId: "contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +26,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id.toLowerCase());
-    el?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
-  };
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -31,7 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
+        <NavLink to="#home" className="flex items-center gap-2 group">
           <img 
             src={iconImage} 
             alt="CNSM Baschet" 
@@ -40,18 +44,19 @@ const Navbar = () => {
           <span className="font-display text-xl font-bold uppercase tracking-wider text-foreground">
             CNSM <span className="text-accent">Baschet</span>
           </span>
-        </button>
+        </NavLink>
 
         {/* Desktop menu */}
         <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollTo(item)}
+            <NavLink
+              key={item.sectionId}
+              to={`#${item.sectionId}`}
               className="text-sm font-medium uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+              activeClassName="text-accent after:w-full"
             >
-              {item}
-            </button>
+              {item.label}
+            </NavLink>
           ))}
           <ThemeToggle />
         </div>
@@ -73,13 +78,15 @@ const Navbar = () => {
           >
             <div className="container mx-auto py-4 px-4 flex flex-col gap-4">
               {navItems.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollTo(item)}
+                <NavLink
+                  key={item.sectionId}
+                  to={`#${item.sectionId}`}
+                  onClick={() => setIsOpen(false)}
                   className="text-left font-display text-lg uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors py-2"
+                  activeClassName="text-accent"
                 >
-                  {item}
-                </button>
+                  {item.label}
+                </NavLink>
               ))}
               <div className="pt-2">
                 <ThemeToggle />
