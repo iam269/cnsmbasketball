@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2 } from "lucide-react";
@@ -243,6 +244,11 @@ const players = [
 const PlayerDetailPage = () => {
   const { id } = useParams();
   const player = players.find((p) => p.id === Number(id));
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!player) {
     return (

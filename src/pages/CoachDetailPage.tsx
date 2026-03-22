@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, User, Award, Calendar, Target, TrendingUp } from "lucide-react";
@@ -34,6 +35,11 @@ const coaches = [
 const CoachDetailPage = () => {
   const { id } = useParams();
   const coach = coaches.find((c) => c.id === Number(id));
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!coach) {
     return (
