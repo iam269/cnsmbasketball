@@ -13,6 +13,7 @@ import NewsPage from "./pages/NewsPage.tsx";
 import SponsorsPage from "./pages/SponsorsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import CoachDetailPage from "./pages/CoachDetailPage.tsx";
+import PlayerDetailPage from "./pages/PlayerDetailPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/sponsors" element={<SponsorsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/coach/:id" element={<CoachDetailPage />} />
+            <Route path="/player/:id" element={<PlayerDetailPage />} />
             <Route path="*" element={<Index />} />
           </Routes>
         </BrowserRouter>
