@@ -77,7 +77,7 @@ const HeroSection = () => {
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold uppercase leading-tight mb-4">
             Bine ai venit la
-            <span className="block text-gradient-animated">CNSM</span>
+            <a href="https://cnsm.ro/" target="_blank" rel="noopener noreferrer" className="block text-gradient-animated hover:opacity-80 transition-opacity">CNSM</a>
             Baschet
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">

@@ -57,15 +57,22 @@ const TeamFooter = () => {
           <div>
             <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Urmărește-ne</h4>
             <div className="flex gap-3">
-              {[Instagram, Twitter, Facebook, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-muted/80 transition-all"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/cnsmtarguneamt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-muted/80 transition-all"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.facebook.com/CNSMTGNT?locale=ro_RO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-muted/80 transition-all"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>

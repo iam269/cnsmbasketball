@@ -28,20 +28,20 @@ const ContactSection = () => {
             className="card-glass overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.8929278267!2d26.369015859510686!3d47.206782879924305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473547003c8f9ead%3A0x66a39764f94ec52f!2sSala%20Polivalenta%20%22%C8%98tefan%20cel%20Mare%22%20Targu%20Neamt!5e1!3m2!1sro!2sro!4v1774107709193!5m2!1sro!2sro"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.8467760595836!2d26.369140538143842!3d47.20553016501453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4735473f1e5700b1%3A0x84e20966c8d87ce3!2zQ29sZWdpdWwgTmHIm2lvbmFsICLImHRlZmFuIGNlbCBNYXJlIiBkaW4gVMOicmd1IE5lYW3Imw!5e1!3m2!1sro!2sro!4v1774192515431!5m2!1sro!2sro"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Locația Sălii de Sport CNSM"
+              title="Locația Colegiului Național Ștefan cel Mare"
             />
             <div className="p-6">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-semibold">Sala de Sport CNSM</p>
+                  <p className="font-semibold">Colegiul Național Ștefan cel Mare</p>
                   <p className="text-muted-foreground text-sm">Târgu Neamț, Județul Neamț, România</p>
                 </div>
               </div>
@@ -69,9 +69,9 @@ const ContactSection = () => {
                   <MapPin className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <div>
                     <p className="text-muted-foreground text-sm">Adresă</p>
-                    <p className="text-lg">Sala de Sport CNSM</p>
+                    <p className="text-lg">Colegiul Național Ștefan cel Mare</p>
                     <p className="text-muted-foreground">Târgu Neamț, Județul Neamț</p>
-                    <p className="text-muted-foreground text-sm mt-2">Coordonate: 47°12'24.23"N 26°22'13.64"E</p>
+                    <p className="text-muted-foreground text-sm mt-2">Coordonate: 47°12'19.91"N 26°22'8.91"E</p>
                   </div>
                 </div>
               </div>
@@ -80,10 +80,10 @@ const ContactSection = () => {
             <div className="card-glass p-8">
               <h3 className="font-display text-xl font-bold uppercase mb-4 text-accent">Urmărește-ne</h3>
               <div className="flex gap-4">
-                <a href="#" className="w-14 h-14 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-all hover:shadow-[var(--shadow-yellow)]">
+                <a href="https://www.instagram.com/cnsmtarguneamt/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-all hover:shadow-[var(--shadow-yellow)]">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="w-14 h-14 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-all hover:shadow-[var(--shadow-yellow)]">
+                <a href="https://www.facebook.com/CNSMTGNT?locale=ro_RO" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-all hover:shadow-[var(--shadow-yellow)]">
                   <Facebook className="w-6 h-6" />
                 </a>
               </div>
