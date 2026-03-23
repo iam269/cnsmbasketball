@@ -1,4 +1,5 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
@@ -21,6 +22,20 @@ import TeamFooter from "@/components/TeamFooter";
 const Index = () => {
   const [loading, setLoading] = useState(true);
   const handleLoadComplete = useCallback(() => setLoading(false), []);
+  const location = useLocation();
+
+  // Handle scroll to hash when page loads
+  useEffect(() => {
+    if (!loading && location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [loading, location.hash]);
 
   return (
     <div className="min-h-screen bg-background">

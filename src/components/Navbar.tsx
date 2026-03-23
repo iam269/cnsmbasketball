@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
@@ -7,24 +8,35 @@ import iconImage from "../assets/icon.png";
 
 const navItems = [
   { label: "Acasă", path: "/" },
-  { label: "Echipă", path: "/team" },
-  { label: "Jucători", path: "/players" },
-  { label: "Program", path: "/schedule" },
-  { label: "Galerie", path: "/gallery" },
-  { label: "Noutăți", path: "/news" },
-  { label: "Sponsori", path: "/sponsors" },
-  { label: "Contact", path: "/contact" },
+  { label: "Echipă", path: "/#players" },
+  { label: "Program", path: "/#schedule" },
+  { label: "Galerie", path: "/#gallery" },
+  { label: "Noutăți", path: "/#news" },
+  { label: "Sponsori", path: "/#sponsors" },
+  { label: "Contact", path: "/#contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    // If we're on the home page with a hash, scroll to top
+    if (location.pathname === "/" && location.hash) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Clear the hash from URL without reloading
+      window.history.replaceState(null, '', '/');
+    }
+  };
 
   return (
     <motion.nav
@@ -35,7 +47,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <NavLink to="/" className="flex items-center gap-2 group">
+        <NavLink 
+          to="/" 
+          onClick={handleHomeClick}
+          className="flex items-center gap-2 group"
+        >
           <img 
             src={iconImage} 
             alt="CNSM Baschet" 
@@ -52,6 +68,7 @@ const Navbar = () => {
             <NavLink
               key={item.path}
               to={item.path}
+              onClick={item.path === "/" ? handleHomeClick : undefined}
               className="text-sm font-medium uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
               activeClassName="text-accent after:w-full"
             >
@@ -81,7 +98,12 @@ const Navbar = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    if (item.path === "/") {
+                      handleHomeClick(e);
+                    }
+                    setIsOpen(false);
+                  }}
                   className="text-left font-display text-lg uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors py-2"
                   activeClassName="text-accent"
                 >

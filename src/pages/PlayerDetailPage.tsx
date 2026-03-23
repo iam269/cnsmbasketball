@@ -256,7 +256,7 @@ const PlayerDetailPage = () => {
         <Navbar />
         <div className="container mx-auto px-4 py-24 text-center">
           <h1 className="text-2xl font-bold">Jucător negăsit</h1>
-          <NavLink to="/team#players" className="text-accent hover:underline mt-4 inline-block">
+          <NavLink to="/#players" className="text-accent hover:underline mt-4 inline-block">
             Înapoi la echipă
           </NavLink>
         </div>
@@ -274,7 +274,7 @@ const PlayerDetailPage = () => {
         className="container mx-auto px-4 py-24"
       >
         <NavLink
-          to="/team#players"
+          to="/#players"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
