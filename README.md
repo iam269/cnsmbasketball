@@ -1,146 +1,150 @@
-# CNSM Baschet - Website Oficial
+# 🏀 CNSM Basketball - Official Website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-blue.svg)](https://vitejs.dev/)
 
-> Site-ul oficial al echipei de baschet CNSM Baschet. Vezi programul, jucătorii, rezultatele, noutățile și multe altele.
+> 🏀 The official website of CNSM Basketball team. View the schedule, players, results, news and more.
 
-## 📋 Descriere
+## 📸 Preview
 
-CNSM Baschet este site-ul oficial al echipei de baschet, construit cu tehnologii web moderne pentru a oferi fanilor o experiență modernă și responsive. Site-ul include informații despre jucători, antrenori, programul meciurilor, galerie foto/video, noutăți și sponsorii echipei.
+![CNSM Basketball Website](src/assets/Screenshot.png)
 
-## 🛠️ Tehnologii
+## Overview
 
-- **Frontend Framework**: [React](https://react.dev/) 18.3
-- **Limbaj**: [TypeScript](https://www.typescriptlang.org/) 5.8
-- **Build Tool**: [Vite](https://vitejs.dev/) 5.4
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) 3.4 + [shadcn/ui](https://ui.shadcn.com/)
-- **Routing**: [React Router DOM](https://reactrouter.com/) 6.30
-- **State Management**: [TanStack Query](https://tanstack.com/query) 5.83
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) 12.35
-- **Forms**: [React Hook Form](https://react-hook-form.com/) 7.61 + [Zod](https://zod.dev/)
-- **Icons**: [Lucide React](https://lucide.dev/) 0.462
-- **Charts**: [Recharts](https://recharts.org/) 2.15
+CNSM Basketball is the official website of the basketball team, built with modern web technologies to provide fans with a modern and responsive experience. The site includes information about players, coaches, game schedule, photo/video gallery, news and team sponsors.
 
-## 🚀getting Started
+## 🛠️ Technologies
 
-### Prerequisites
+- **🎨 Frontend Framework**: [React](https://react.dev/) 18.3
+- **📘 Language**: [TypeScript](https://www.typescriptlang.org/) 5.8
+- **⚡ Build Tool**: [Vite](https://vitejs.dev/) 5.4
+- **🎭 Styling**: [Tailwind CSS](https://tailwindcss.com/) 3.4 + [shadcn/ui](https://ui.shadcn.com/)
+- **🔀 Routing**: [React Router DOM](https://reactrouter.com/) 6.30
+- **📡 State Management**: [TanStack Query](https://tanstack.com/query) 5.83
+- **✨ Animations**: [Framer Motion](https://www.framer.com/motion/) 12.35
+- **📝 Forms**: [React Hook Form](https://react-hook-form.com/) 7.61 + [Zod](https://zod.dev/)
+- **🔗 Icons**: [Lucide React](https://lucide.dev/) 0.462
+- **📊 Charts**: [Recharts](https://recharts.org/) 2.15
 
-- [Node.js](https://nodejs.org/) (versiunea 18+)
-- [Bun](https://bun.sh/) (optional, alternativă la npm)
+## 🚀 Getting Started
 
-### Installation
+### 📋 Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 18+)
+- [Bun](https://bun.sh/) (optional, alternative to npm)
+
+### 🛠️ Installation
 
 ```bash
-# Clonează repository-ul
+# Clone the repository
 git clone <repository-url>
 cd cnsmbasketball
 
-# Instalează dependențele
+# Install dependencies
 npm install
-# sau dacă folosești Bun
+# or if using Bun
 bun install
 ```
 
-### Development
+### 💻 Development
 
 ```bash
-# Pornește serverul de dezvoltare
+# Start development server
 npm run dev
 
-# Rulează linter-ul
+# Run linter
 npm run lint
 
-# Rulează testele
+# Run tests
 npm run test
 ```
 
-### Build
+### 🔨 Build
 
 ```bash
-# Build pentru producție
+# Build for production
 npm run build
 
-# Build pentru dezvoltare
+# Build for development
 npm run build:dev
 
-# Previzualizează build-ul
+# Preview build
 npm run preview
 ```
 
-### Deployment
+### 🚢 Deployment
 
 ```bash
-# Deploy pe GitHub Pages
+# Deploy to GitHub Pages
 npm run deploy
 ```
 
-## 📁 Structura Proiectului
+## 📁 Project Structure
 
 ```
 cnsmbasketball/
 ├── src/
-│   ├── assets/              # Resurse statice (imagini, video)
-│   │   └── games/          # Media din meciuri
-│   ├── components/         # Componente React
-│   │   ├── ui/             # Componente UI (shadcn)
-│   │   └── *.tsx           # Componente specifice
+│   ├── assets/              # Static assets (images, video)
+│   │   └── games/          # Match media
+│   ├── components/         # React components
+│   │   ├── ui/             # UI components (shadcn)
+│   │   └── *.tsx           # Specific components
 │   ├── hooks/              # Custom React hooks
-│   ├── lib/                # Utilități
-│   ├── pages/              # Pagini principale
-│   ├── test/               # Teste
-│   ├── App.tsx             # Componenta principală
+│   ├── lib/                # Utilities
+│   ├── pages/              # Main pages
+│   ├── test/               # Tests
+│   ├── App.tsx             # Main component
 │   ├── main.tsx            # Entry point
-│   └── index.css           # Stiluri globale
-├── public/                 # Fișiere publice
-├── index.html              # HTML principal
-├── package.json            # Dependențe și scripturi
-├── tailwind.config.ts      # Configurare Tailwind
-├── vite.config.ts          # Configurare Vite
-└── tsconfig.json          # Configurare TypeScript
+│   └── index.css           # Global styles
+├── public/                 # Public files
+├── index.html              # Main HTML
+├── package.json            # Dependencies and scripts
+├── tailwind.config.ts      # Tailwind configuration
+├── vite.config.ts          # Vite configuration
+└── tsconfig.json          # TypeScript configuration
 ```
 
-## 🔗 Rute
+## 🛤️ Routes
 
-| Ruta | Descriere |
-|------|-----------|
-| `/` | Pagina principală (Home) |
-| `/team` | Pagina echipei |
-| `/players` | Lista jucătorilor |
-| `/player/:id` | Detalii jucător |
-| `/schedule` | Programul meciurilor |
-| `/gallery` | Galeria foto/video |
-| `/news` | Noutăți |
-| `/sponsors` | Sponsorii |
+| Route | Description |
+|------|-------------|
+| `/` | Home page |
+| `/team` | Team page |
+| `/players` | Players list |
+| `/player/:id` | Player details |
+| `/schedule` | Game schedule |
+| `/gallery` | Photo/video gallery |
+| `/news` | News |
+| `/sponsors` | Sponsors |
 | `/contact` | Contact |
-| `/coach/:id` | Detalii antrenor |
+| `/coach/:id` | Coach details |
 
-## 🎨 Caracteristici
+## ✨ Features
 
 - 🌙 Dark/Light Mode toggle
-- 📱 Design responsive (mobile-first)
-- 🎬 Galerie media cu video și foto
-- 📊 Statistici și rezultate
-- 🏆 Secțiune realizări
-- 📰 Sistem de știri
-- 👥 Pagini pentru jucători și antrenori
-- 🎨 Animații fluidă cu Framer Motion
+- 📱 Responsive design (mobile-first)
+- 🎬 Media gallery with video and photos
+- 📊 Statistics and results
+- 🏆 Achievements section
+- 📰 News system
+- 👥 Pages for players and coaches
+- 🎨 Smooth animations with Framer Motion
 
-## 📝 Contribuire
+## 🤝 Contributing
 
-1. Fork repository-ul
-2. Creează un branch nou (`git checkout -b feature/nova-functionalitate`)
-3. Commit modificările (`git commit -m 'Adaug nova functionalitate'`)
-4. Push la branch (`git push origin feature/nova-functionalitate`)
-5. Deschide un Pull Request
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-## 📄 Licență
+## 📜 License
 
-Acest proiect este licențiat sub MIT License - vezi fișierul [LICENSE](LICENSE) pentru detalii.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
+## 📬 Contact
 
 - **Email**: contact@cnsmbaschet.ro
 - **Website**: www.cnsmbaschet.ro
@@ -148,4 +152,4 @@ Acest proiect este licențiat sub MIT License - vezi fișierul [LICENSE](LICENSE
 
 ---
 
-Creat cu ❤️ de CNSM Baschet
+⭐ Made with ❤️ by CNSM Basketball
