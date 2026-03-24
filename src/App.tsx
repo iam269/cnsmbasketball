@@ -1,3 +1,10 @@
+/**
+ * CNSM Baschet - Website Oficial
+ * Componenta principală a aplicației
+ * 
+ * @module App
+ * @description Configurează routing, providers și tema aplicației
+ */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -15,8 +22,15 @@ import ContactPage from "./pages/ContactPage.tsx";
 import CoachDetailPage from "./pages/CoachDetailPage.tsx";
 import PlayerDetailPage from "./pages/PlayerDetailPage.tsx";
 
+/**
+ * QueryClient pentru TanStack Query - gestionează starea serverului
+ */
 const queryClient = new QueryClient();
 
+/**
+ * Componenta principală a aplicației
+ * Configurează providers și routing pentru întreaga aplicație
+ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider

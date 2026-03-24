@@ -1,3 +1,10 @@
+/**
+ * CNSM Baschet - Website Oficial
+ * Componenta de navigare (Navbar)
+ * 
+ * @module Navbar
+ * @description Bara de navigare responsive cu meniu mobil, theme toggle și animatii
+ */
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
