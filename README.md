@@ -11,6 +11,10 @@
 
 ![CNSM Basketball Website](src/assets/Screenshot.png)
 
+## 🌐 Demo
+
+🔗 **Live Demo**: [https://iam269.github.io/cnsmbasketball/](https://iam269.github.io/cnsmbasketball/)
+
 ## Overview
 
 CNSM Basketball is the official website of the basketball team, built with modern web technologies to provide fans with a modern and responsive experience. The site includes information about players, coaches, game schedule, photo/video gallery, news and team sponsors.
