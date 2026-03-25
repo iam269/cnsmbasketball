@@ -84,39 +84,45 @@ const VideosSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {filteredVideos.map((video, i) => (
-            <motion.div
-              key={video.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: Math.min(i * 0.05, 0.5) }}
-              className="card-glass overflow-hidden group cursor-pointer"
-              onClick={() => setActiveVideo(activeVideo === video.id ? null : video.id)}
-            >
-              <div className="relative aspect-video">
-                {activeVideo === video.id ? (
-                  <video
-                    src={video.src}
-                    controls
-                    autoPlay
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-muted flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center">
-                      <Play className="w-8 h-8 text-black ml-1" />
+          {filteredVideos.length === 0 ? (
+            <div className="col-span-full text-center py-12">
+              <p className="text-muted-foreground text-lg">Încă nu sunt disponibile</p>
+            </div>
+          ) : (
+            filteredVideos.map((video, i) => (
+              <motion.div
+                key={video.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: Math.min(i * 0.05, 0.5) }}
+                className="card-glass overflow-hidden group cursor-pointer"
+                onClick={() => setActiveVideo(activeVideo === video.id ? null : video.id)}
+              >
+                <div className="relative aspect-video">
+                  {activeVideo === video.id ? (
+                    <video
+                      src={video.src}
+                      controls
+                      autoPlay
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-muted flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center">
+                        <Play className="w-8 h-8 text-black ml-1" />
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-              <div className="p-4">
-                <h3 className="font-display font-bold uppercase mb-1 group-hover:text-accent transition-colors">
-                  {video.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">{video.description}</p>
-              </div>
-            </motion.div>
-          ))}
+                  )}
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display font-bold uppercase mb-1 group-hover:text-accent transition-colors">
+                    {video.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">{video.description}</p>
+                </div>
+              </motion.div>
+            ))
+          )}
         </div>
       </div>
     </section>
