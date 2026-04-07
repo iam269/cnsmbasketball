@@ -13,7 +13,7 @@
 
 ## 🌐 Demo
 
-🔗 **Live Demo**: [itsiamdev.github.io/cnsmbasketball/](itsiamdev.github.io/cnsmbasketball/)
+🔗 **Live Demo**: [https://itsiamdev.github.io/cnsmbasketball/](https://itsiamdev.github.io/cnsmbasketball/)
 
 ## Overview
 
