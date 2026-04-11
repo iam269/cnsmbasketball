@@ -1,12 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { NavLink } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const news = [
-  { date: "Mar 5, 2026", title: "Eagles Clinch Playoff Spot with Dominant Win", excerpt: "An outstanding performance by Marcus Johnson led the Eagles to a 91-68 victory, securing their spot in the state playoffs." },
-  { date: "Feb 28, 2026", title: "Player Spotlight: Jaylen Carter Named MVP", excerpt: "Senior forward Jaylen Carter has been named the conference MVP after an incredible season averaging 22 points per game." },
-  { date: "Feb 20, 2026", title: "Annual Basketball Camp Registration Open", excerpt: "Sign up for our summer basketball camp! Open to all students grades 6-12. Learn from our coaching staff and varsity players." },
-  { date: "Feb 14, 2026", title: "New Uniforms Unveiled for Playoff Push", excerpt: "The team debuted sleek new uniforms featuring an updated eagle logo and premium materials for the postseason run." },
+  { id: 1, date: "5 Mar 2026", title: "Vulturii Asigură Locul în Playoff", excerpt: "O performanță remarcabilă de Marcus Johnson a dus Vulturii la o victorie cu 91-68, asigurându-și locul în playoff-ul de stat." },
+  { id: 2, date: "28 Feb 2026", title: "Jucător în Centrul Atenției: Jaylen Carter MVP", excerpt: "Forward-ul de anul mai mare Jaylen Carter a fost desemnat MVP-ul conferinței după o sezon incredibilă cu o medie de 22 de puncte pe meci." },
+  { id: 3, date: "20 Feb 2026", title: "Înregistrare la Tabăra de Baschet", excerpt: "Înscrie-te la tabăra noastră de baschet din vară! Deschisă tuturor elevilor din clasele 6-12. Învață de la staff-ul nostru de antrenori și jucătorii echipei principale." },
+  { id: 4, date: "14 Feb 2026", title: "Noile Uniforme Dezvăluite", excerpt: "Echipa a debutat cu uniforme noi elegante, cu un logo de vultur actualizat și materiale premium pentru campania din playoff." },
 ];
 
 const NewsSection = () => {
@@ -35,12 +36,14 @@ const NewsSection = () => {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="card-glass p-6 group hover:border-accent/30 cursor-pointer"
             >
-              <p className="text-accent text-xs font-display uppercase tracking-wider mb-2">{item.date}</p>
-              <h3 className="font-display text-xl font-bold uppercase mb-3 group-hover:text-accent transition-colors">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.excerpt}</p>
-              <span className="inline-flex items-center gap-1 text-accent text-sm font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
-                Citește mai mult <ArrowRight className="w-4 h-4" />
-              </span>
+              <NavLink to={`/news/${item.id}`} className="block">
+                <p className="text-accent text-xs font-display uppercase tracking-wider mb-2">{item.date}</p>
+                <h3 className="font-display text-xl font-bold uppercase mb-3 group-hover:text-accent transition-colors">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.excerpt}</p>
+                <span className="inline-flex items-center gap-1 text-accent text-sm font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                  Citește mai mult <ArrowRight className="w-4 h-4" />
+                </span>
+              </NavLink>
             </motion.article>
           ))}
         </div>

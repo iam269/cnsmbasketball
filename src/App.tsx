@@ -21,6 +21,7 @@ import SponsorsPage from "./pages/SponsorsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import CoachDetailPage from "./pages/CoachDetailPage.tsx";
 import PlayerDetailPage from "./pages/PlayerDetailPage.tsx";
+import NewsDetailPage from "./pages/NewsDetailPage.tsx";
 
 /**
  * QueryClient pentru TanStack Query - gestionează starea serverului
@@ -50,6 +51,7 @@ const App = () => (
             <Route path="/schedule" element={<SchedulePage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/news" element={<NewsPage />} />
+            <Route path="/news/:id" element={<NewsDetailPage />} />
             <Route path="/sponsors" element={<SponsorsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/coach/:id" element={<CoachDetailPage />} />
