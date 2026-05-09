@@ -33,7 +33,7 @@ const TeamFooter = () => {
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
-              CNSM Baschet — Construim campioni din 2001.
+              CNSM Baschet — Construim campioni din 2026
             </p>
           </div>
 
