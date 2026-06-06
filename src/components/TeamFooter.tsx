@@ -1,4 +1,5 @@
-import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Instagram, Facebook } from "lucide-react";
 import icon from "@/assets/icon.png";
 
 const footerLinks = [
@@ -11,6 +12,12 @@ const footerLinks = [
   { label: "Contact", id: "contact" },
 ];
 
+const aboutLinks = [
+  { label: "Dezvoltator", path: "/dezvoltator" },
+  { label: "Politica de confidențialitate", path: "/politica-confidentialitate" },
+  { label: "Termeni și condiții", path: "/termeni-si-conditii" },
+];
+
 const TeamFooter = () => {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -19,7 +26,7 @@ const TeamFooter = () => {
   return (
     <footer className="border-t border-border bg-card/50 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -33,7 +40,7 @@ const TeamFooter = () => {
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
-              CNSM Baschet — Construim campioni din 2026
+              CNSM Baschet — Echipa oficială de baschet a Colegiului National Stefan cel Mare Târgu Neamț
             </p>
           </div>
 
@@ -49,6 +56,22 @@ const TeamFooter = () => {
                 >
                   {link.label}
                 </button>
+              ))}
+            </div>
+          </div>
+
+          {/* About */}
+          <div>
+            <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Despre</h4>
+            <div className="flex flex-col gap-2">
+              {aboutLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>
