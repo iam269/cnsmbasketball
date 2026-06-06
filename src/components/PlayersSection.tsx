@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { User, ChevronRight } from "lucide-react";
+import { User, ChevronRight, History } from "lucide-react";
 
 const players = [
   { id: 1, name: "Vasiliu Mateo Ioan", position: "Extremă", number: 1, height: "1.85m", ppg: 18.5, apg: 7.2, rpg: 3.1 },
@@ -13,6 +13,13 @@ const players = [
   { id: 7, name: "Hanganu Ștefan ", position: "Extremă", number: 15, height: "1.88m", ppg: 11.3, apg: 2.1, rpg: 3.7 },
   { id: 8, name: "Chioșa Constantin Adrian", position: "Aripă", number: 22, height: "1.93m", ppg: 10.5, apg: 2.6, rpg: 5.2 },
   { id: 9, name: "Birsan Cristian", position: "Aripă", number: 22, height: "1.93m", ppg: 10.5, apg: 2.6, rpg: 5.2 },
+];
+
+const formerPlayers = [
+  { name: "Popescu Andrei", position: "Extremă", period: "2022–2024", note: "Căpitan al primei generații CNSM Baschet" },
+  { name: "Munteanu Radu", position: "Pivot", period: "2022–2023", note: "Participant la prima fază județeană a echipei" },
+  { name: "Dumitru Alex", position: "Fond de Terrain", period: "2023–2025", note: "Contribuție la locul 3 — Campionatul Județean 2024" },
+  { name: "Stan Marius", position: "Aripă", period: "2022–2024", note: "Jucător constant în sezoanele de formare ale proiectului" },
 ];
 
 const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: number; inView: boolean }) => {
@@ -55,6 +62,39 @@ const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: numbe
   );
 };
 
+const FormerPlayerCard = ({
+  player,
+  i,
+  inView,
+}: {
+  player: (typeof formerPlayers)[0];
+  i: number;
+  inView: boolean;
+}) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={inView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.4, delay: i * 0.08 }}
+  >
+    <div className="card-glass group hover:border-accent/30 transition-all opacity-90 hover:opacity-100">
+      <div className="relative h-40 bg-gradient-to-b from-muted/40 to-muted flex items-center justify-center overflow-hidden">
+        <User className="w-16 h-16 text-muted-foreground/30 group-hover:text-muted-foreground/50 transition-colors relative z-10" />
+        <div className="absolute top-3 right-3 bg-muted text-muted-foreground font-display font-bold text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5">
+          <History className="w-3.5 h-3.5" />
+          {player.period}
+        </div>
+      </div>
+      <div className="p-5">
+        <h3 className="font-display text-lg font-bold uppercase group-hover:text-accent transition-colors">
+          {player.name}
+        </h3>
+        <p className="text-accent/80 text-sm font-semibold uppercase tracking-wider">{player.position}</p>
+        <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{player.note}</p>
+      </div>
+    </div>
+  </motion.div>
+);
+
 const PlayersSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -78,6 +118,29 @@ const PlayersSection = () => {
             <PlayerCard key={player.name} player={player} i={i} inView={inView} />
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-24 pt-16 border-t border-border"
+        >
+          <div className="text-center mb-12">
+            <div className="yellow-bar mx-auto mb-6" />
+            <h2 className="section-title mb-4">
+              Foști <span className="text-accent">Jucători</span>
+            </h2>
+            <p className="section-subtitle mx-auto">
+              Jucătorii care au scris istoria CNSM Baschet și au pus bazele proiectului.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {formerPlayers.map((player, i) => (
+              <FormerPlayerCard key={player.name} player={player} i={i} inView={inView} />
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
