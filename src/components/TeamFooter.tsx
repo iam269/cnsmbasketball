@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Instagram, Facebook } from "lucide-react";
 import icon from "@/assets/icon.png";
 
 const footerLinks = [
-  { label: "Acasă", id: "home" },
-  { label: "Echipă", id: "team" },
-  { label: "Jucători", id: "players" },
-  { label: "Program", id: "schedule" },
-  { label: "Galerie", id: "gallery" },
-  { label: "Noutăți", id: "news" },
-  { label: "Contact", id: "contact" },
+  { label: "Acasă", path: "/" },
+  { label: "Echipă", path: "/#team" },
+  { label: "Jucători", path: "/#players" },
+  { label: "Program", path: "/#schedule" },
+  { label: "Galerie", path: "/#gallery" },
+  { label: "Noutăți", path: "/#news" },
+  { label: "Contact", path: "/#contact" },
 ];
 
 const aboutLinks = [
@@ -19,8 +19,16 @@ const aboutLinks = [
 ];
 
 const TeamFooter = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const location = useLocation();
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (location.hash) {
+        window.history.replaceState(null, "", "/");
+      }
+    }
   };
 
   return (
@@ -49,13 +57,14 @@ const TeamFooter = () => {
             <h4 className="font-display font-bold uppercase tracking-wider text-accent mb-4">Link-uri Rapide</h4>
             <div className="grid grid-cols-2 gap-2">
               {footerLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollTo(link.id)}
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={link.path === "/" ? handleHomeClick : undefined}
                   className="text-left text-sm text-muted-foreground hover:text-accent transition-colors"
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
