@@ -13,7 +13,7 @@
 
 ## 🌐 Demo
 
-🔗 **Live Demo**: [https://itsiamdev.github.io/cnsmbasketball/](https://itsiamdev.github.io/cnsmbasketball/)
+🔗 **Live Demo**: [https://cnsmbasketball.vercel.app/](https://cnsmbasketball.vercel.app/)
 
 ## Overview
 
