@@ -6,7 +6,6 @@ const galleryImages = [
   { src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop", alt: "Basketball game action" },
   { src: "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=600&h=400&fit=crop", alt: "Team huddle" },
   { src: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=600&h=400&fit=crop", alt: "Basketball dunk" },
-  { src: "https://images.unsplash.com/photo-1504450758481-7338bbe75c8e?w=600&h=400&fit=crop", alt: "Basketball court" },
   { src: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop", alt: "Basketball" },
   { src: "https://images.unsplash.com/photo-1559692048-79a3f837883d?w=600&h=400&fit=crop", alt: "Basketball players" },
 ];
