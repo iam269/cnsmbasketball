@@ -76,9 +76,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold uppercase leading-tight mb-4">
-            Bine ai venit la
+            Bine ai venit! în Ecipa de Baschet
             <a href="https://cnsm.ro/" target="_blank" rel="noopener noreferrer" className="block text-gradient-animated hover:opacity-80 transition-opacity">CNSM</a>
-            Baschet
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
             Site-ul oficial al echipei de baschet CNSM Târgu Neamț — unde pasiunea pentru baschet întâlnește performanța
