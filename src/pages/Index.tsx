@@ -47,7 +47,7 @@ const Index = () => {
           <Navbar />
           <HeroSection />
           <AboutSection />
-          <PlayersSection />
+          <PlayersSection maxPlayers={4} />
           <CoachesSection id="coaches" />
           <HighlightsSection />
           <ScheduleSection />

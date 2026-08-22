@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { User, ChevronRight, History } from "lucide-react";
 
 const players = [
@@ -95,9 +96,12 @@ const FormerPlayerCard = ({
   </motion.div>
 );
 
-const PlayersSection = () => {
+const PlayersSection = ({ maxPlayers }: { maxPlayers?: number }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const displayedPlayers = maxPlayers ? players.slice(0, maxPlayers) : players;
+  const hasMore = maxPlayers !== undefined && players.length > maxPlayers;
 
   return (
     <section id="players" className="py-24 bg-muted/30">
@@ -109,38 +113,48 @@ const PlayersSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Cunoaște <span className="text-accent">Lotul</span></h2>
-          <p className="section-subtitle mx-auto">Inima și sufletul echipei CNSM — vezi detaliile complete ale jucătorilor.</p>
+          <h2 className="section-title mb-4">Cunoaște <span className="text-accent">echipa</span> și <span className="text-accent">Jucători</span></h2>
+          <p className="section-subtitle mx-auto">Jucători echipei CNSM — vezi detaliile complete ale jucătorilor.</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {players.map((player, i) => (
+          {displayedPlayers.map((player, i) => (
             <PlayerCard key={player.name} player={player} i={i} inView={inView} />
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-24 pt-16 border-t border-border"
-        >
-          <div className="text-center mb-12">
-            <div className="yellow-bar mx-auto mb-6" />
-            <h2 className="section-title mb-4">
-              Foști <span className="text-accent">Jucători</span>
-            </h2>
-            <p className="section-subtitle mx-auto">
-              Jucătorii care au scris istoria CNSM Baschet și au pus bazele proiectului.
-            </p>
+        {hasMore && (
+          <div className="text-center mt-10">
+            <NavLink to="/players" className="btn-primary">
+              Vezi toți jucătorii
+            </NavLink>
           </div>
+        )}
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {formerPlayers.map((player, i) => (
-              <FormerPlayerCard key={player.name} player={player} i={i} inView={inView} />
-            ))}
-          </div>
-        </motion.div>
+        {!maxPlayers && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-24 pt-16 border-t border-border"
+          >
+            <div className="text-center mb-12">
+              <div className="yellow-bar mx-auto mb-6" />
+              <h2 className="section-title mb-4">
+                Foști <span className="text-accent">Jucători</span>
+              </h2>
+              <p className="section-subtitle mx-auto">
+                Jucătorii care au scris istoria CNSM Baschet și au pus bazele proiectului.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {formerPlayers.map((player, i) => (
+                <FormerPlayerCard key={player.name} player={player} i={i} inView={inView} />
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
