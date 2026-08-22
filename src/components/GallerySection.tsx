@@ -1,18 +1,13 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop", alt: "Basketball game action" },
-  { src: "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=600&h=400&fit=crop", alt: "Team huddle" },
-  { src: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=600&h=400&fit=crop", alt: "Basketball dunk" },
-  { src: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop", alt: "Basketball" },
-  { src: "https://images.unsplash.com/photo-1559692048-79a3f837883d?w=600&h=400&fit=crop", alt: "Basketball players" },
-  { src: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=600&h=400&fit=crop", alt: "Basketball court" },
-  { src: "https://images.unsplash.com/photo-1517477147097-ee104afbbd14?w=600&h=400&fit=crop", alt: "Basketball team celebration" },
-  { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop", alt: "Basketball player shooting" },
-];
+const gameImages = Object.values(
+  import.meta.glob("/src/assets/games/images/*.jpeg", { as: "url", eager: true })
+)
+  .map((src, i) => ({ id: i, src, alt: `Imagine meci ${i + 1}` }))
+  .sort((a, b) => a.src.localeCompare(b.src));
 
 interface GallerySectionProps {
   limit?: number;
@@ -23,8 +18,8 @@ const GallerySection = ({ limit }: GallerySectionProps) => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [selected, setSelected] = useState<number | null>(null);
 
-  const visibleImages = limit ? galleryImages.slice(0, limit) : galleryImages;
-  const hasMore = limit !== undefined && galleryImages.length > limit;
+  const visibleImages = limit ? gameImages.slice(0, limit) : gameImages;
+  const hasMore = limit !== undefined && gameImages.length > limit;
 
   return (
     <section id="gallery" className="py-24">
@@ -42,7 +37,7 @@ const GallerySection = ({ limit }: GallerySectionProps) => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {visibleImages.map((img, i) => (
             <motion.button
-              key={i}
+              key={img.id}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: i * 0.08 }}
@@ -76,16 +71,45 @@ const GallerySection = ({ limit }: GallerySectionProps) => {
             className="fixed inset-0 z-50 bg-background/95 flex items-center justify-center p-4"
             onClick={() => setSelected(null)}
           >
-            <button className="absolute top-6 right-6 text-foreground hover:text-accent transition-colors">
+            <button 
+              className="absolute top-6 right-6 text-foreground hover:text-accent transition-colors z-10"
+              onClick={(e) => { e.stopPropagation(); setSelected(null); }}
+            >
               <X className="w-8 h-8" />
             </button>
+
+            {gameImages.length > 1 && (
+              <>
+                <button
+                  className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-foreground hover:text-accent transition-colors bg-background/50 hover:bg-background/80 rounded-full p-2 z-10"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelected((prev) => (prev !== null ? (prev - 1 + gameImages.length) % gameImages.length : null));
+                  }}
+                >
+                  <ChevronLeft className="w-8 h-8" />
+                </button>
+                <button
+                  className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-foreground hover:text-accent transition-colors bg-background/50 hover:bg-background/80 rounded-full p-2 z-10"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelected((prev) => (prev !== null ? (prev + 1) % gameImages.length : null));
+                  }}
+                >
+                  <ChevronRight className="w-8 h-8" />
+                </button>
+              </>
+            )}
+
             <motion.img
+              key={selected}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              src={galleryImages[selected].src.replace("w=600&h=400", "w=1200&h=800")}
-              alt={galleryImages[selected].alt}
+              src={gameImages[selected].src}
+              alt={gameImages[selected].alt}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
             />
           </motion.div>
         )}
