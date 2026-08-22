@@ -25,6 +25,7 @@ import NewsDetailPage from "./pages/NewsDetailPage.tsx";
 import DeveloperPage from "./pages/DeveloperPage.tsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.tsx";
 import TermsPage from "./pages/TermsPage.tsx";
+import VideosPage from "./pages/VideosPage.tsx";
 
 /**
  * QueryClient pentru TanStack Query - gestionează starea serverului
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/players" element={<PlayersPage />} />
             <Route path="/schedule" element={<SchedulePage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/videos" element={<VideosPage />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/news/:id" element={<NewsDetailPage />} />
             <Route path="/sponsors" element={<SponsorsPage />} />

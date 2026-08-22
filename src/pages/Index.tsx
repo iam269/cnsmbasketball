@@ -54,7 +54,7 @@ const Index = () => {
           <ResultsSection />
           <AchievementsSection />
           <GallerySection limit={6} />
-          <VideosSection />
+          <VideosSection limit={6} />
           <SponsorsSection />
           <NewsSection />
           <ContactSection />

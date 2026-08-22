@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import video1 from "@/assets/games/WhatsApp Video 2026-03-22 at 17.48.48.mp4";
 import video2 from "@/assets/games/WhatsApp Video 2026-03-22 at 17.48.55 (1).mp4";
 import video3 from "@/assets/games/WhatsApp Video 2026-03-22 at 17.48.55.mp4";
@@ -45,13 +46,19 @@ const videos = [
 
 const years = [2026, 2025, 2024];
 
-const VideosSection = () => {
+interface VideosSectionProps {
+  limit?: number;
+}
+
+const VideosSection = ({ limit }: VideosSectionProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
   const [selectedYear, setSelectedYear] = useState<number>(2026);
 
   const filteredVideos = videos.filter(video => video.year === selectedYear);
+  const visibleVideos = limit ? filteredVideos.slice(0, limit) : filteredVideos;
+  const hasMore = limit !== undefined && filteredVideos.length > limit;
 
   return (
     <section id="videos" className="py-24 bg-muted/30">
@@ -84,12 +91,12 @@ const VideosSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {filteredVideos.length === 0 ? (
+          {visibleVideos.length === 0 ? (
             <div className="col-span-full text-center py-12">
               <p className="text-muted-foreground text-lg">Încă nu sunt disponibile</p>
             </div>
           ) : (
-            filteredVideos.map((video, i) => (
+            visibleVideos.map((video, i) => (
               <motion.div
                 key={video.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -124,6 +131,14 @@ const VideosSection = () => {
             ))
           )}
         </div>
+
+        {hasMore && (
+          <div className="text-center mt-8">
+            <Link to="/videos" className="btn-accent">
+              Vezi toate videoclipurile
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
