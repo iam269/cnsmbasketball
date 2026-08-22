@@ -14,6 +14,7 @@ const footerLinks = [
 
 const aboutLinks = [
   { label: "Dezvoltator", path: "/dezvoltator" },
+  { label: "Contribuție", path: "/contributie" },
   { label: "Politica de confidențialitate", path: "/politica-confidentialitate" },
   { label: "Termeni și condiții", path: "/termeni-si-conditii" },
 ];

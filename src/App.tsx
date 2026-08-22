@@ -19,6 +19,7 @@ import GalleryPage from "./pages/GalleryPage.tsx";
 import NewsPage from "./pages/NewsPage.tsx";
 import SponsorsPage from "./pages/SponsorsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import ContributePage from "./pages/ContributePage.tsx";
 import CoachDetailPage from "./pages/CoachDetailPage.tsx";
 import PlayerDetailPage from "./pages/PlayerDetailPage.tsx";
 import NewsDetailPage from "./pages/NewsDetailPage.tsx";
@@ -59,6 +60,7 @@ const App = () => (
             <Route path="/news/:id" element={<NewsDetailPage />} />
             <Route path="/sponsors" element={<SponsorsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/contributie" element={<ContributePage />} />
             <Route path="/coach/:id" element={<CoachDetailPage />} />
             <Route path="/player/:id" element={<PlayerDetailPage />} />
             <Route path="/dezvoltator" element={<DeveloperPage />} />
