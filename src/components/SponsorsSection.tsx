@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 
 const sponsors = [
   { name: "CNSM", desc: "Colegiul Național Ștefan cel Mare", url: "https://cnsm.ro" },
-  { name: "Ioniță Aurel Mihai", desc: "Dezvoltator Web", url: "https://ionitaaurelmihai.vercel.app" },
+  { name: "Ioniță Aurel Mihai", desc: "Dezvoltator Web", url: "https://www.itsiamdev.com/" },
 ];
 
 const SponsorsSection = () => {

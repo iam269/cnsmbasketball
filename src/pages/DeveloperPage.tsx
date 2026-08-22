@@ -14,14 +14,14 @@ const DeveloperPage = () => {
         <p className="font-display text-xl font-bold uppercase text-accent mb-1">
           Ioniță Aurel Mihai
         </p>
-        <p className="text-muted-foreground text-sm mb-4">Dezvoltator Web</p>
+        <p className="text-muted-foreground text-sm mb-4">Dezvoltator Web și Elev la Colegiul Național „Ștefan cel Mare”</p>
         <a
-          href="https://ionitaaurelmihai.vercel.app"
+          href="https://www.itsiamdev.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent/80 transition-colors"
         >
-          ionitaaurelmihai.vercel.app
+          www.itsiamdev.com
           <ExternalLink className="w-4 h-4" />
         </a>
       </div>
