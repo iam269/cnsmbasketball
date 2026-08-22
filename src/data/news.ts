@@ -1,7 +1,7 @@
 export const newsItems = [
   {
     id: 1,
-    date: "Ultima modificare: 10 Apr 2026",
+    date: " 22 Aug 2026",
     title: "Regulamentul Oficial de Baschet Actualizat",
     excerpt:
       "Regulamentul oficial de baschet pentru sezonul 2025-2026 este acum disponibil. Află toate regulile, principiile de joc și ghidurile oficiale pentru a deveni un jucător mai bun și a înțelege mai bine jocul.",
@@ -407,75 +407,6 @@ Comportamentul nesportiv poate fi sancționat.`,
   },
   {
     id: 2,
-    date: "5 Mar 2026",
-    title: "Vulturii Asigură Locul în Playoff",
-    excerpt:
-      "O performanță remarcabilă de Marcus Johnson a dus Vulturii la o victorie cu 91-68, asigurându-și locul în playoff-ul de stat.",
-    content: `Echipa de baschet CNSM a obținut o victorie crucială împotriva echipei CNRV cu scorul de 91-68, asigurându-și locul în playoff-ul de stat pentru al doilea an consecutiv.
- 
- Marcus Johnson a fost starul serii, terminând meciul cu o performanță incredibilă de 32 de puncte, 8 pase decisive și 6 recuperări. Jucătorul de anul mai mare a fost aproape de un record personal de puncte.
- 
- "Antrenorul nostru ne-a cerut să jucăm cu pasiune și dedicare, și asta am făcut", a declarat Johnson după meci. "Suntem o echipă unită și suntem pregătiți pentru ceea ce urmează."
- 
- Echipa va începe pregătirea pentru playoff săptămâna viitoare, cu meciuri programate împotriva celor mai bune echipe din stat.`,
-    image: null,
-  },
-  {
-    id: 3,
-    date: "28 Feb 2026",
-    title: "Jucător în Centrul Atenției: Jaylen Carter MVP",
-    excerpt:
-      "Forward-ul de anul mai mare Jaylen Carter a fost desemnat MVP-ul conferinței după o sezon incredibilă cu o medie de 22 de puncte pe meci.",
-    content: `Jaylen Carter, forward-ul de anul mai mare al echipei CNSM, a fost desemnat Most Valuable Player (MVP) al conferinței după o performanță sezonieră excepțională.
- 
- Carter a terminat sezonul regulat cu o medie de 22 de puncte pe meci, alături de 7.5 recuperări și 3.2 pase decisive.performanțăa sa l-a făcut pe cel mai bun marcator din întreaga conferință.
- 
- "Este o onoare incredibilă", a declarat Carter. "Nu aș fi reușit fără echipa mea. Această recunoaștere ne aparține tuturor."
- 
- Carter este al doilea jucător din istoria CNSM care primește această distincție, după celegendul echipei din 2019.`,
-    image: null,
-  },
-  {
-    id: 4,
-    date: "20 Feb 2026",
-    title: "Înregistrare la Tabăra de Baschet",
-    excerpt:
-      "Înscrie-te la tabăra noastră de baschet din vară! Deschisă tuturor elevilor din clasele 6-12. Învață de la staff-ul nostru de antrenori și jucătorii echipei principale.",
-    content: `Tabăra de Baschet CNSM își deschide porțile pentru vara 2026!
- 
- Ne adresăm tuturor elevilor din clasele 6-12 care doresc să-și îmbunătățească abilitățile de baschet. Tabăra va fi susținută de staff-ul nostru profesional de antrenori, inclusiv antrenorii echipei principale.
- 
- Ce include tabăra:
- - Antrenamente tehnice zilnice
- - Meciuri și competiții
- - Sesiuni de tir și pasă
- - Întâlniri cu jucătorii echipei
- - Echipament de baschet gratuit
- 
- Data: 15 Iulie - 30 Iulie 2026
- Locație: Sala de Sport CNSM
- Taxă: 350 lei (incluzând echipament)
- 
- Înscrierile se fac până pe 30 Iunie 2026. Locurile sunt limitate!`,
-    image: null,
-  },
-  {
-    id: 5,
-    date: "14 Feb 2026",
-    title: "Noile Uniforme Dezvăluite",
-    excerpt:
-      "Echipa a debutat cu uniforme noi elegante, cu un logo de vultur actualizat și materiale premium pentru campania din playoff.",
-    content: `Echipa de baschet CNSM a dezvăluit noile uniforme pentru sezonul de playoff 2026!
- 
- Noua garderobă prezintă un design modernizat cu logo-ul Vulturului actualizat, păstrând totodată tradiția culorilor galben și negru ale echipei.
- 
- "N am vrut ceva care să reprezinte puterea și eleganța echipei noastre", a declarat designerul. "Materialele premium asigură confort și libertate de mișcare în timpul meciurilor intense."
- 
- Uniformele vor fi purtate pentru prima dată în meciul de deschidere a playoff-ului. Fanii vor putea achiziționa replica oficială a uniformei de la magazinul echipei.`,
-    image: null,
-  },
-  {
-    id: 6,
     date: "22 Aug 2026",
     title: "🏀 Regulamentul Oficial FIBA 3x3",
     excerpt:
