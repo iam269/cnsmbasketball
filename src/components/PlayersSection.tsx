@@ -96,7 +96,7 @@ const FormerPlayerCard = ({
   </motion.div>
 );
 
-const PlayersSection = ({ maxPlayers }: { maxPlayers?: number }) => {
+const PlayersSection = ({ maxPlayers, showFormerPlayers = true }: { maxPlayers?: number; showFormerPlayers?: boolean }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -131,7 +131,7 @@ const PlayersSection = ({ maxPlayers }: { maxPlayers?: number }) => {
           </div>
         )}
 
-        {!maxPlayers && (
+        {showFormerPlayers && !maxPlayers && (
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}

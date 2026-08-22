@@ -18,8 +18,8 @@ const CoachesSection = ({ id }: { id?: string }) => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Staff de <span className="text-accent">Antrenament</span></h2>
-          <p className="section-subtitle mx-auto">Liderii din spatele succesului CNSM.</p>
+          <h2 className="section-title mb-4">Antrenorul <span className="text-accent">Echipei</span></h2>
+          <p className="section-subtitle mx-auto">Antrenorul principal al echipei de baschet.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">

@@ -3,9 +3,9 @@ import { useRef } from "react";
 import { Zap, Star, TrendingUp } from "lucide-react";
 
 const highlights = [
-  { icon: Zap, title: "Invincibili Acasă", desc: "Record 12-0 pe teren propriu în acest sezon — fortăreața noastră rămâne neatinsă." },
-  { icon: Star, title: "Campioni ai Conferinței", desc: "Titluri consecutive ale conferinței care demonstrează dominarea CNSM în ligă." },
-  { icon: TrendingUp, title: "Sezon Record", desc: "Cei mai mulți puncte marcați într-un singur sezon din istorie — 2.847 de puncte în total." },
+  { icon: Zap, title: "Calificați la Etapa Locală", desc: "Am reușit calificarea în etapa locală a campionatului județean, demonstrând progresul sezonului." },
+  { icon: Star, title: "Locul 3 la Județ", desc: "Performanță remarcabilă la faza județeană — am terminat pe locul 3, cea mai bună clasare din istoria proiectului." },
+  { icon: TrendingUp, title: "Sezon Record", desc: "Cei mai mulți puncte marcați într-un singur sezon — rezultatul muncii și coeziunii lotului." },
 ];
 
 const HighlightsSection = () => {
@@ -24,8 +24,8 @@ const HighlightsSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Momente Importante <span className="text-accent">din Sezon</span></h2>
-          <p className="section-subtitle mx-auto">Realizări cheie dintr-un sezon incredibil.</p>
+          <h2 className="section-title mb-4">Momente Importante <span className="text-accent">din Sezonoane</span></h2>
+          <p className="section-subtitle mx-auto">Realizări cheie din sezoanele trecute</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
