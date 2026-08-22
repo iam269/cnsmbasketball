@@ -5,8 +5,8 @@ import { Target, Award, Users } from "lucide-react";
 
 const stats = [
   { label: "Ani de Activitate", value: 4, icon: Target },
-  { label: "Podiumuri Județene", value: 2, icon: Award },
-  { label: "Meciuri Disputate", value: 23, icon: Users },
+  { label: "Meciuri Disputate", value: 45, icon: Award },
+  { label: "Jucători în Lot", value: 18, icon: Users },
 ];
 
 const Counter = ({ target, inView }: { target: number; inView: boolean }) => {
@@ -40,9 +40,14 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <div className="yellow-bar mx-auto mb-6" />
-          <h2 className="section-title mb-4">Despre <span className="text-accent">CNSM</span></h2>
+          <h2 className="section-title mb-4">
+            Despre <span className="text-accent">Echipă</span>
+          </h2>
           <p className="section-subtitle mx-auto">
-            Din 2022, CNSM Baschet Târgu Neamț a fost o forță în baschetul judetean. Programul nostru dezvoltă nu doar sportivi, ci și lideri, campioni pe și în afara terenului.
+            Din 2022, CNSM Baschet Târgu Neamț participă la competițiile
+            județene de baschet masculin, reprezentând cu drag școala noastră.
+            Ne bucurăm să oferim elevilor ocazia de a descoperi baschetul, de a
+            învăța să lucreze împreună și de a se bucura de fiecare meci.{" "}
           </p>
         </motion.div>
 
@@ -59,7 +64,9 @@ const AboutSection = () => {
               <div className="stat-number mb-2">
                 <Counter target={stat.value} inView={inView} />
               </div>
-              <p className="text-muted-foreground font-display uppercase tracking-wider">{stat.label}</p>
+              <p className="text-muted-foreground font-display uppercase tracking-wider">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -71,15 +78,27 @@ const AboutSection = () => {
           className="grid md:grid-cols-2 gap-8"
         >
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Misiunea Noastră</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">
+              Misiunea Noastră
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Să cultivăm excelența sportivă, munca în echipă și sportivitatea pregătind tinerii sportivi pentru succes dincolo de teren. Credem în munca asiduă, disciplină și puterea unității.
+              Ne dorim să încurajăm tinerii să facă sport, să descopere bucuria
+              mișcării și să își petreacă timpul într-un mod activ și sănătos.
+              Prin baschet, îi încurajăm să fie disciplinați, să lucreze în
+              echipă, să se respecte reciproc și, mai ales, să se bucure de
+              sport.
             </p>
           </div>
           <div className="card-glass p-8">
-            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">Obiectivele Noastre</h3>
+            <h3 className="font-display text-2xl font-bold uppercase mb-4 text-accent">
+              Obiectivele Noastre
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Să câștigăm campionatul, să menținem o medie a echipei peste 8.0, să trimitem jucătorii la programe universitare și să construim caracter pentru o viață. Fiecare antrenament, fiecare meci contează.
+              Participarea regulată în Campionatul Județean de baschet masculin.
+              Consolidarea lotului exclusiv cu jucători din clasele liceului.
+              Obiectivul principal este câștigarea Campionatului Județean.
+              Creșterea numărului de meciuri și a experienței competitive
+              anuale.
             </p>
           </div>
         </motion.div>
