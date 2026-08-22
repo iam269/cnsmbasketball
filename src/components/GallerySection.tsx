@@ -1,6 +1,7 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const galleryImages = [
   { src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop", alt: "Basketball game action" },
@@ -8,12 +9,22 @@ const galleryImages = [
   { src: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?w=600&h=400&fit=crop", alt: "Basketball dunk" },
   { src: "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&h=400&fit=crop", alt: "Basketball" },
   { src: "https://images.unsplash.com/photo-1559692048-79a3f837883d?w=600&h=400&fit=crop", alt: "Basketball players" },
+  { src: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=600&h=400&fit=crop", alt: "Basketball court" },
+  { src: "https://images.unsplash.com/photo-1517477147097-ee104afbbd14?w=600&h=400&fit=crop", alt: "Basketball team celebration" },
+  { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop", alt: "Basketball player shooting" },
 ];
 
-const GallerySection = () => {
+interface GallerySectionProps {
+  limit?: number;
+}
+
+const GallerySection = ({ limit }: GallerySectionProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [selected, setSelected] = useState<number | null>(null);
+
+  const visibleImages = limit ? galleryImages.slice(0, limit) : galleryImages;
+  const hasMore = limit !== undefined && galleryImages.length > limit;
 
   return (
     <section id="gallery" className="py-24">
@@ -29,7 +40,7 @@ const GallerySection = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {galleryImages.map((img, i) => (
+          {visibleImages.map((img, i) => (
             <motion.button
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -45,6 +56,14 @@ const GallerySection = () => {
             </motion.button>
           ))}
         </div>
+
+        {hasMore && (
+          <div className="text-center mt-8">
+            <Link to="/gallery" className="btn-accent">
+              Vezi toate imaginile
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
