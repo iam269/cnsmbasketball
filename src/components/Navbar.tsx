@@ -62,7 +62,7 @@ const Navbar = () => {
           <img 
             src={iconImage} 
             alt="CNSM Baschet" 
-            className="w-10 h-10 rounded-full object-cover group-hover:shadow-[var(--shadow-glow)] transition-shadow"
+            className="w-14 h-14 rounded-full object-cover group-hover:shadow-[var(--shadow-glow)] transition-shadow"
           />
           <span className="font-display text-xl font-bold uppercase tracking-wider text-foreground">
             CNSM <span className="text-accent">Baschet</span>

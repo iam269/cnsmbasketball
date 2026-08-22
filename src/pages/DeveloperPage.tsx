@@ -14,7 +14,7 @@ const DeveloperPage = () => {
         <p className="font-display text-xl font-bold uppercase text-accent mb-1">
           Ioniță Aurel Mihai
         </p>
-        <p className="text-muted-foreground text-sm mb-4">Dezvoltator Web și Elev la Colegiul Național „Ștefan cel Mare”</p>
+        <p className="text-muted-foreground text-sm mb-4">Dezvoltator Web</p>
         <a
           href="https://www.itsiamdev.com/"
           target="_blank"

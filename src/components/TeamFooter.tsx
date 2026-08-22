@@ -41,7 +41,7 @@ const TeamFooter = () => {
               <img 
                 src={icon} 
                 alt="CNSM Baschet" 
-                className="w-10 h-10 rounded-full"
+                className="w-14 h-14 rounded-full"
               />
               <span className="font-display text-lg font-bold uppercase tracking-wider">
                 CNSM <span className="text-accent">Baschet</span>
