@@ -1,9 +1,16 @@
 import { useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2, Instagram } from "lucide-react";
+import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2, Instagram, Check, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TeamFooter from "@/components/TeamFooter";
+
+type SeasonInfo = {
+  season: string;
+  principal: boolean;
+  secondary: boolean;
+  training: boolean;
+};
 
 const players = [
   {
@@ -14,6 +21,13 @@ const players = [
     height: "1.85m",
     weight: "75kg",
     age: 17,
+    grade: "11A",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2023-2024", principal: false, secondary: true, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 18.5,
     apg: 7.2,
     rpg: 3.1,
@@ -42,6 +56,14 @@ const players = [
     height: "1.90m",
     weight: "80kg",
     age: 18,
+    grade: "12B",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2022-2023", principal: true, secondary: false, training: true },
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 15.8,
     apg: 3.4,
     rpg: 4.0,
@@ -69,6 +91,13 @@ const players = [
     height: "1.96m",
     weight: "85kg",
     age: 17,
+    grade: "11A",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 22.1,
     apg: 2.8,
     rpg: 6.5,
@@ -97,6 +126,14 @@ const players = [
     height: "2.01m",
     weight: "95kg",
     age: 18,
+    grade: "12B",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2022-2023", principal: true, secondary: false, training: true },
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 14.2,
     apg: 1.9,
     rpg: 8.3,
@@ -124,6 +161,13 @@ const players = [
     height: "2.06m",
     weight: "100kg",
     age: 17,
+    grade: "11B",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 12.6,
     apg: 1.2,
     rpg: 10.1,
@@ -151,6 +195,12 @@ const players = [
     height: "1.80m",
     weight: "70kg",
     age: 16,
+    grade: "10A",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 9.8,
     apg: 5.5,
     rpg: 2.4,
@@ -178,6 +228,13 @@ const players = [
     height: "1.88m",
     weight: "78kg",
     age: 17,
+    grade: "11A",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 11.3,
     apg: 2.1,
     rpg: 3.7,
@@ -204,6 +261,14 @@ const players = [
     height: "1.93m",
     weight: "82kg",
     age: 18,
+    grade: "12B",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2022-2023", principal: true, secondary: false, training: true },
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 10.5,
     apg: 2.6,
     rpg: 5.2,
@@ -230,6 +295,13 @@ const players = [
     height: "1.93m",
     weight: "83kg",
     age: 17,
+    grade: "11A",
+    currentSeason: "2025-2026",
+    seasonsInfo: [
+      { season: "2023-2024", principal: true, secondary: false, training: true },
+      { season: "2024-2025", principal: true, secondary: false, training: true },
+      { season: "2025-2026", principal: true, secondary: false, training: true },
+    ] satisfies SeasonInfo[],
     ppg: 10.5,
     apg: 2.6,
     rpg: 5.2,
@@ -254,7 +326,6 @@ const PlayerDetailPage = () => {
   const { id } = useParams();
   const player = players.find((p) => p.id === Number(id));
 
-  // Scroll to top when page loads
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
@@ -343,52 +414,59 @@ const PlayerDetailPage = () => {
               {player.description}
             </p>
 
-            {/* Season Stats */}
+            {/* Player Info */}
             <div className="bg-muted/30 p-6 rounded-lg mb-8">
               <h3 className="font-display text-lg font-bold uppercase mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-accent" />
-                Statistici Sezon
+                <Target className="w-5 h-5 text-accent" />
+                Informații Jucător
               </h3>
-              <div className="grid grid-cols-3 gap-4 mb-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent">{player.ppg}</div>
-                  <div className="text-xs text-muted-foreground uppercase">PPG</div>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-background/50 p-4 rounded-lg border border-border">
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Clasa</div>
+                  <div className="text-xl font-bold text-foreground">{player.grade}</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent">{player.apg}</div>
-                  <div className="text-xs text-muted-foreground uppercase">APG</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent">{player.rpg}</div>
-                  <div className="text-xs text-muted-foreground uppercase">RPG</div>
+                <div className="bg-background/50 p-4 rounded-lg border border-border">
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Poziția</div>
+                  <div className="text-xl font-bold text-foreground">{player.position}</div>
                 </div>
               </div>
-              <div className="border-t border-border pt-4 mt-4">
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Meciuri jucate</span>
-                    <span className="font-semibold">{player.stats.gamesPlayed}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Total puncte</span>
-                    <span className="font-semibold">{player.stats.totalPoints}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Total pase</span>
-                    <span className="font-semibold">{player.stats.totalAssists}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Total recuperări</span>
-                    <span className="font-semibold">{player.stats.totalRebounds}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">CG</span>
-                    <span className="font-semibold">{player.stats.fieldGoalPercentage}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">3P</span>
-                    <span className="font-semibold">{player.stats.threePointPercentage}</span>
-                  </div>
+
+              <div className="mb-2">
+                <div className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Sezonul actual</div>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-accent text-accent-foreground">
+                  {player.currentSeason}
+                </span>
+              </div>
+
+              <div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Participare pe sezoane</div>
+                <div className="overflow-x-auto rounded-lg border border-border">
+                  <table className="w-full min-w-[460px] text-sm">
+                    <thead className="bg-background/50 text-xs uppercase tracking-wider text-muted-foreground">
+                      <tr>
+                        <th className="px-3 py-3 text-left font-semibold">Sezon</th>
+                        <th className="px-3 py-3 text-center font-semibold">Principală</th>
+                        <th className="px-3 py-3 text-center font-semibold">Secundară</th>
+                        <th className="px-3 py-3 text-center font-semibold">Antrenare</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border">
+                      {player.seasonsInfo.map((seasonInfo) => (
+                        <tr key={seasonInfo.season} className="bg-background/20">
+                          <td className="px-3 py-3 font-semibold text-foreground">{seasonInfo.season}</td>
+                          {[seasonInfo.principal, seasonInfo.secondary, seasonInfo.training].map((participated, index) => (
+                            <td key={index} className="px-3 py-3 text-center">
+                              {participated ? (
+                                <Check aria-label="Da" className="mx-auto h-4 w-4 text-accent" />
+                              ) : (
+                                <X aria-label="Nu" className="mx-auto h-4 w-4 text-muted-foreground/60" />
+                              )}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
