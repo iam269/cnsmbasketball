@@ -6,11 +6,9 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import PlayersSection from "@/components/PlayersSection";
-import HighlightsSection from "@/components/HighlightsSection";
 
 import ScheduleSection from "@/components/ScheduleSection";
 import ResultsSection from "@/components/ResultsSection";
-import AchievementsSection from "@/components/AchievementsSection";
 import GallerySection from "@/components/GallerySection";
 import CoachesSection from "@/components/CoachesSection";
 import SponsorsSection from "@/components/SponsorsSection";
@@ -49,10 +47,8 @@ const Index = () => {
           <AboutSection />
           <PlayersSection maxPlayers={4} />
           <CoachesSection id="coaches" />
-          <HighlightsSection />
           <ScheduleSection />
           <ResultsSection />
-          <AchievementsSection />
           <GallerySection limit={6} />
           <VideosSection limit={6} />
           <SponsorsSection />
