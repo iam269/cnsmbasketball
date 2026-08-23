@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2 } from "lucide-react";
+import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2, Instagram } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TeamFooter from "@/components/TeamFooter";
 
@@ -17,6 +17,7 @@ const players = [
     ppg: 18.5,
     apg: 7.2,
     rpg: 3.1,
+    instagram: "https://www.instagram.com/vasiliu.mateo/",
     description: "Jucător talentat cu abilități excepționale de tir. Este unul dintre cei mai promițători jucători ai echipei.",
     achievements: [
       "Cel mai bun marcator - Campionatul Judetean 2025",
@@ -44,6 +45,7 @@ const players = [
     ppg: 15.8,
     apg: 3.4,
     rpg: 4.0,
+    instagram: "https://www.instagram.com/iacob.emanuel/",
     description: "Jucător cu experiență, capabil să joace multiple poziții. Lider natural pe teren.",
     achievements: [
       "Locul 2 - Campionatul Judetean 2024",
@@ -70,6 +72,7 @@ const players = [
     ppg: 22.1,
     apg: 2.8,
     rpg: 6.5,
+    instagram: "https://www.instagram.com/istrate.david/",
     description: "Cel mai bun marcator al echipei. Performanță excepțională în atac și apărare.",
     achievements: [
       "Cel mai valoros jucător (MVP) - Campionatul Judetean 2025",
@@ -97,6 +100,7 @@ const players = [
     ppg: 14.2,
     apg: 1.9,
     rpg: 8.3,
+    instagram: "https://www.instagram.com/ionita.aurel/",
     description: "Pivot dominant sub coș. Forță și prezență în aria de sub panou.",
     achievements: [
       "Cel mai bun recuperator - Campionatul Judetean 2025",
@@ -123,6 +127,7 @@ const players = [
     ppg: 12.6,
     apg: 1.2,
     rpg: 10.1,
+    instagram: "https://www.instagram.com/cepoi.dragos/",
     description: "Centru de elită cu abilități excelente de recuperare și protecție a coșului.",
     achievements: [
       "Cel mai bun centru - Campionatul Judetean 2024",
@@ -149,6 +154,7 @@ const players = [
     ppg: 9.8,
     apg: 5.5,
     rpg: 2.4,
+    instagram: "https://www.instagram.com/stanica.luca/",
     description: "Playmaker talentat cu viziune excelentă de joc. Creator de ocazii pentru colegi.",
     achievements: [
       "Cel mai bun pasator - Campionatul Judetean 2025",
@@ -175,6 +181,7 @@ const players = [
     ppg: 11.3,
     apg: 2.1,
     rpg: 3.7,
+    instagram: "https://www.instagram.com/hanganu.stefan/",
     description: "Jucător versatil cu potențial mare de creștere. Apărător agresiv.",
     achievements: [
       "Echipa All-Defensive - Campionatul Judetean 2025",
@@ -200,6 +207,7 @@ const players = [
     ppg: 10.5,
     apg: 2.6,
     rpg: 5.2,
+    instagram: "https://www.instagram.com/chiosa.constantin/",
     description: "Aripă completă cu abilități de scor și pasă. Energie constantă.",
     achievements: [
       "Progresul sezonului 2025",
@@ -225,6 +233,7 @@ const players = [
     ppg: 10.5,
     apg: 2.6,
     rpg: 5.2,
+    instagram: "https://www.instagram.com/birsan.cristian/",
     description: "Jucător cu mentality de învingător. Performanță consistentă în meciuri importante.",
     achievements: [
       "Jucătorul meciului de cele mai multe ori",
@@ -399,6 +408,24 @@ const PlayerDetailPage = () => {
                 ))}
               </ul>
             </div>
+
+            {/* Contact / Social */}
+            {player.instagram && (
+              <div className="mt-6">
+                <h3 className="font-display text-lg font-bold uppercase mb-3 flex items-center gap-2">
+                  Contact
+                </h3>
+                <a
+                  href={player.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span className="text-sm font-medium">Instagram</span>
+                </a>
+              </div>
+            )}
           </motion.div>
         </div>
       </motion.div>
