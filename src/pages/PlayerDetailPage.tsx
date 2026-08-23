@@ -345,6 +345,10 @@ const PlayerDetailPage = () => {
     );
   }
 
+  const sortedSeasons = [...player.seasonsInfo].sort((firstSeason, secondSeason) =>
+    secondSeason.season.localeCompare(firstSeason.season),
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -444,25 +448,39 @@ const PlayerDetailPage = () => {
                   <table className="w-full min-w-[460px] text-sm">
                     <thead className="bg-background/50 text-xs uppercase tracking-wider text-muted-foreground">
                       <tr>
+                        <th className="px-3 py-3 text-center font-semibold">Nr.</th>
                         <th className="px-3 py-3 text-left font-semibold">Sezon</th>
-                        <th className="px-3 py-3 text-center font-semibold">Principală</th>
-                        <th className="px-3 py-3 text-center font-semibold">Secundară</th>
-                        <th className="px-3 py-3 text-center font-semibold">Antrenare</th>
+                        <th className="px-3 py-3 text-center font-semibold">Echipa principală</th>
+                        <th className="px-3 py-3 text-center font-semibold">Echipa secundară</th>
+                        <th className="px-3 py-3 text-center font-semibold">Antrenament</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border">
-                      {player.seasonsInfo.map((seasonInfo) => (
+                      {sortedSeasons.map((seasonInfo) => (
                         <tr key={seasonInfo.season} className="bg-background/20">
+                          <td className="px-3 py-3 text-center font-bold text-accent">#{player.number}</td>
                           <td className="px-3 py-3 font-semibold text-foreground">{seasonInfo.season}</td>
-                          {[seasonInfo.principal, seasonInfo.secondary, seasonInfo.training].map((participated, index) => (
-                            <td key={index} className="px-3 py-3 text-center">
-                              {participated ? (
-                                <Check aria-label="Da" className="mx-auto h-4 w-4 text-accent" />
-                              ) : (
-                                <X aria-label="Nu" className="mx-auto h-4 w-4 text-muted-foreground/60" />
-                              )}
-                            </td>
-                          ))}
+                          <td className="px-3 py-3 text-center">
+                            {seasonInfo.principal ? (
+                              <Check aria-label="Da" className="mx-auto h-4 w-4 text-accent" />
+                            ) : (
+                              <X aria-label="Nu" className="mx-auto h-4 w-4 text-muted-foreground/60" />
+                            )}
+                          </td>
+                          <td className="px-3 py-3 text-center">
+                            {seasonInfo.secondary ? (
+                              <Check aria-label="Da" className="mx-auto h-4 w-4 text-accent" />
+                            ) : (
+                              <X aria-label="Nu" className="mx-auto h-4 w-4 text-muted-foreground/60" />
+                            )}
+                          </td>
+                          <td className="px-3 py-3 text-center">
+                            {seasonInfo.training ? (
+                              <Check aria-label="Da" className="mx-auto h-4 w-4 text-accent" />
+                            ) : (
+                              <X aria-label="Nu" className="mx-auto h-4 w-4 text-muted-foreground/60" />
+                            )}
+                          </td>
                         </tr>
                       ))}
                     </tbody>
