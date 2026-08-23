@@ -4,10 +4,9 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const gameImages = Object.values(
-  import.meta.glob("/src/assets/games/images/*.jpeg", { as: "url", eager: true })
-)
-  .map((src, i) => ({ id: i, src, alt: `Imagine meci ${i + 1}` }))
-  .sort((a, b) => a.src.localeCompare(b.src));
+  import.meta.glob("/src/assets/games/images/*.jpeg", { query: "?url", import: "default", eager: true })
+).map((src, i) => ({ id: i, src: src as string, alt: `Imagine meci ${i + 1}` }))
+  .sort((a, b) => (a.src as string).localeCompare(b.src as string));
 
 interface GallerySectionProps {
   limit?: number;
