@@ -4,7 +4,18 @@ import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { User, ChevronRight, History } from "lucide-react";
 
-const players = [
+type Player = {
+  id: number;
+  name: string;
+  position: string;
+  number: number;
+  height: string;
+  ppg: number;
+  apg: number;
+  rpg: number;
+};
+
+const players: Player[] = [
   { id: 1, name: "Vasiliu Mateo Ioan", position: "Extremă", number: 1, height: "1.85m", ppg: 18.5, apg: 7.2, rpg: 3.1 },
   { id: 2, name: "Iacob Dumitru Emanuel ", position: "Extremă", number: 3, height: "1.90m", ppg: 15.8, apg: 3.4, rpg: 4.0 },
   { id: 3, name: "Istrate David", position: "Aripă", number: 7, height: "1.96m", ppg: 22.1, apg: 2.8, rpg: 6.5 },
@@ -23,7 +34,7 @@ const formerPlayers = [
   { name: "Stan Marius", position: "Aripă", period: "2022–2024", note: "Jucător constant în sezoanele de formare ale proiectului" },
 ];
 
-const PlayerCard = ({ player, i, inView }: { player: typeof players[0]; i: number; inView: boolean }) => {
+const PlayerCard = ({ player, i, inView }: { player: Player; i: number; inView: boolean }) => {
   const navigate = useNavigate();
 
   return (

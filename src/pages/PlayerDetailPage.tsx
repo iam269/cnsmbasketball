@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2, Instagram, Check, X } from "lucide-react";
+import { ArrowLeft, User, Award, Calendar, Target, TrendingUp, Gamepad2, Instagram, Check, X, Facebook, Globe } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TeamFooter from "@/components/TeamFooter";
 
@@ -138,6 +138,8 @@ const players = [
     apg: 1.9,
     rpg: 8.3,
     instagram: "https://www.instagram.com/ionita.aurel/",
+    facebook: "https://www.facebook.com/aurel.ionita",
+    website: "https://www.aurel-ionita.com",
     description: "Pivot dominant sub coș. Forță și prezență în aria de sub panou.",
     achievements: [
       "Cel mai bun recuperator - Campionatul Judetean 2025",
@@ -506,20 +508,46 @@ const PlayerDetailPage = () => {
             </div>
 
             {/* Contact / Social */}
-            {player.instagram && (
+            {(player.instagram || player.facebook || player.website) && (
               <div className="mt-6">
                 <h3 className="font-display text-lg font-bold uppercase mb-3 flex items-center gap-2">
                   Contact
                 </h3>
-                <a
-                  href={player.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
-                >
-                  <Instagram className="w-5 h-5" />
-                  <span className="text-sm font-medium">Instagram</span>
-                </a>
+                <div className="flex flex-col gap-3">
+                  {player.instagram && (
+                    <a
+                      href={player.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      <Instagram className="w-5 h-5" />
+                      <span className="text-sm font-medium">Instagram</span>
+                    </a>
+                  )}
+                  {player.facebook && (
+                    <a
+                      href={player.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      <Facebook className="w-5 h-5" />
+                      <span className="text-sm font-medium">Facebook</span>
+                    </a>
+                  )}
+                  {player.website && (
+                    <a
+                      href={player.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      <Globe className="w-5 h-5" />
+                      <span className="text-sm font-medium">Website</span>
+                    </a>
+                  )}
+                </div>
               </div>
             )}
           </motion.div>
