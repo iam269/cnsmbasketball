@@ -137,9 +137,9 @@ const players = [
     ppg: 14.2,
     apg: 1.9,
     rpg: 8.3,
-    instagram: "https://www.instagram.com/ionita.aurel/",
-    facebook: "https://www.facebook.com/aurel.ionita",
-    website: "https://www.aurel-ionita.com",
+    instagram: "https://www.instagram.com/ionitaaurelmihai/",
+    facebook: "https://www.facebook.com/ionitaaurelmihai",
+    website: "https://www.itsiamdev.com/",
     description: "Pivot dominant sub coș. Forță și prezență în aria de sub panou.",
     achievements: [
       "Cel mai bun recuperator - Campionatul Judetean 2025",
