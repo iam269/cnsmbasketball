@@ -80,7 +80,7 @@ const HeroSection = () => {
             <a href="https://cnsm.ro/" target="_blank" rel="noopener noreferrer" className="block text-gradient-animated hover:opacity-80 transition-opacity">CNSM</a>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Performanță, pasiune și victorie - echipa care reprezintă CNSM Târgu Neamț pe toate terenurile
+            Performanță, pasiune și victorie - echipa care aduce excelența pe teren
           </p>
         </motion.div>
 
